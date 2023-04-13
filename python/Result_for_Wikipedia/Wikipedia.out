@@ -1,0 +1,311 @@
+[Start] Making connection
+device = cuda:0
+[iir-12.1.1.csv]
+Asking to truncate to max_length but no maximum length is provided and the model has no predefined maximum length. Default to no truncation.
+/home/gyuseok/anaconda3/envs/Upitt/lib/python3.9/site-packages/transformers/generation/utils.py:1288: UserWarning: Using `max_length`'s default (20) to control the generation length. This behaviour is deprecated and will be removed from the config in v5 of Transformers -- we recommend using `max_new_tokens` to control the maximum length of the generation.
+  warnings.warn(
+[Connect] csv_keyword = queri, wiki_title = Luna Sharpshooters, avg_score = 0.28995025157928467
+[Connect] csv_keyword = queri, wiki_title = Quirites, avg_score = 0.3153051435947418
+[Connect] csv_keyword = queri, wiki_title = Philippine Revolutionary Army, avg_score = 0.28786197304725647
+[Connect] csv_keyword = queri, wiki_title = Latin conjugation, avg_score = 0.2935495972633362
+[Connect] csv_keyword = queri, wiki_title = Antonio Luna, avg_score = 0.41307520866394043
+[Connect] csv_keyword = queri, wiki_title = Toʼabaita language, avg_score = 0.3369905948638916
+[Connect] csv_keyword = queri, wiki_title = Voss, avg_score = 0.25320833921432495
+[Connect] csv_keyword = queri, wiki_title = 2022 NCAA Division I women's soccer tournament, avg_score = 0.33343011140823364
+Cannot Find any page! Continue next
+[Connect] csv_keyword = language theori, wiki_title = Theoris of Lemnos, avg_score = 0.2862815856933594
+[Connect] csv_keyword = language theori, wiki_title = Viggo Brøndal, avg_score = 0.2844609320163727
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = language theori, wiki_title = Herman Valentiner, avg_score = 0.2581866681575775
+[Connect] csv_keyword = probabilistic finite automaton, wiki_title = Probabilistic automaton, avg_score = 0.5921973586082458
+[Connect] csv_keyword = probabilistic finite automaton, wiki_title = Quantum finite automaton, avg_score = 0.44796669483184814
+[Connect] csv_keyword = probabilistic finite automaton, wiki_title = Nondeterministic finite automaton, avg_score = 0.33364811539649963
+[Connect] csv_keyword = probabilistic finite automaton, wiki_title = Automata theory, avg_score = 0.3994559347629547
+/home/gyuseok/anaconda3/envs/Upitt/lib/python3.9/site-packages/wikipedia/wikipedia.py:389: GuessedAtParserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+The code that caused this warning is on line 389 of the file /home/gyuseok/anaconda3/envs/Upitt/lib/python3.9/site-packages/wikipedia/wikipedia.py. To get rid of this warning, pass the additional argument 'features="html.parser"' to the BeautifulSoup constructor.
+
+  lis = BeautifulSoup(html).find_all('li')
+Cannot Find any page! Continue next
+[Connect] csv_keyword = probabilistic finite automaton, wiki_title = Stochastic cellular automaton, avg_score = 0.5378652215003967
+[Connect] csv_keyword = probabilistic finite automaton, wiki_title = Büchi automaton, avg_score = 0.4416731297969818
+[Connect] csv_keyword = probabilistic finite automaton, wiki_title = Quantum cellular automaton, avg_score = 0.2524610161781311
+[Connect] csv_keyword = likelihood ratio, wiki_title = Likelihood-ratio test, avg_score = 0.3288382589817047
+[Connect] csv_keyword = likelihood ratio, wiki_title = Likelihood function, avg_score = 0.5496620535850525
+[Connect] csv_keyword = likelihood ratio, wiki_title = Likelihood ratios in diagnostic testing, avg_score = 0.5913791060447693
+[Connect] csv_keyword = likelihood ratio, wiki_title = Likelihood principle, avg_score = 0.4861810505390167
+[Connect] csv_keyword = likelihood ratio, wiki_title = Maximum likelihood estimation, avg_score = 0.5347551703453064
+[Connect] csv_keyword = likelihood ratio, wiki_title = Bayes factor, avg_score = 0.31675276160240173
+[Connect] csv_keyword = document rank, wiki_title = Mean reciprocal rank, avg_score = 0.2735128104686737
+[Connect] csv_keyword = document rank, wiki_title = Learning to rank, avg_score = 0.26567479968070984
+Cannot Find any page! Continue next
+[Connect] csv_keyword = document rank, wiki_title = SCImago Journal Rank, avg_score = 0.35234105587005615
+[Connect] csv_keyword = document rank, wiki_title = Enlisted rank, avg_score = 0.27920499444007874
+[Connect] csv_keyword = document rank, wiki_title = Diplomatic rank, avg_score = 0.5268857479095459
+[Connect] csv_keyword = document model, wiki_title = Document Object Model, avg_score = 0.5660733580589294
+[Connect] csv_keyword = document model, wiki_title = Document modelling, avg_score = 0.5482351183891296
+[Connect] csv_keyword = document model, wiki_title = Bag-of-words model, avg_score = 0.39594554901123047
+[Connect] csv_keyword = document model, wiki_title = Query likelihood model, avg_score = 0.45671194791793823
+[Connect] csv_keyword = document model, wiki_title = Identity document, avg_score = 0.26126161217689514
+[Connect] csv_keyword = document model, wiki_title = JDOM, avg_score = 0.277588814496994
+[Connect] csv_keyword = document model, wiki_title = Database model, avg_score = 0.41739705204963684
+[Connect] csv_keyword = language of the automaton, wiki_title = Automata theory, avg_score = 0.34128081798553467
+[Connect] csv_keyword = language of the automaton, wiki_title = Automation, avg_score = 0.26627978682518005
+[Connect] csv_keyword = language of the automaton, wiki_title = Deterministic finite automaton, avg_score = 0.30128002166748047
+[Connect] csv_keyword = language of the automaton, wiki_title = Regular language, avg_score = 0.31335723400115967
+[Connect] csv_keyword = language of the automaton, wiki_title = Pushdown automaton, avg_score = 0.3689587116241455
+[Connect] csv_keyword = language of the automaton, wiki_title = Nondeterministic finite automaton, avg_score = 0.32775557041168213
+[Connect] csv_keyword = language of the automaton, wiki_title = Finite-state machine, avg_score = 0.5620365738868713
+[Connect] csv_keyword = language of the automaton, wiki_title = Büchi automaton, avg_score = 0.4696788787841797
+[Connect] csv_keyword = language of the automaton, wiki_title = Ω-automaton, avg_score = 0.49752378463745117
+[Connect] csv_keyword = finite automata, wiki_title = Finite-state machine, avg_score = 0.7667210102081299
+[Connect] csv_keyword = finite automata, wiki_title = Deterministic finite automaton, avg_score = 0.507491946220398
+[Connect] csv_keyword = finite automata, wiki_title = Nondeterministic finite automaton, avg_score = 0.4099317789077759
+[Connect] csv_keyword = finite automata, wiki_title = Automata theory, avg_score = 0.44446709752082825
+[Connect] csv_keyword = finite automata, wiki_title = Nondeterministic finite automaton, avg_score = 0.4099317789077759
+[Connect] csv_keyword = finite automata, wiki_title = Alternating finite automaton, avg_score = 0.5633218884468079
+[Connect] csv_keyword = finite automata, wiki_title = Cellular automaton, avg_score = 0.3317008912563324
+[Connect] csv_keyword = finite automata, wiki_title = Krohn–Rhodes theory, avg_score = 0.4446219801902771
+[Connect] csv_keyword = finite automata, wiki_title = Finite Automata (band), avg_score = 0.41535887122154236
+[Connect] csv_keyword = finite automata, wiki_title = Büchi automaton, avg_score = 0.476237028837204
+[Connect] csv_keyword = finite automaton, wiki_title = Finite-state machine, avg_score = 0.7512925863265991
+[Connect] csv_keyword = finite automaton, wiki_title = Deterministic finite automaton, avg_score = 0.47982752323150635
+[Connect] csv_keyword = finite automaton, wiki_title = Nondeterministic finite automaton, avg_score = 0.4011709988117218
+[Connect] csv_keyword = finite automaton, wiki_title = Alternating finite automaton, avg_score = 0.5774737000465393
+[Connect] csv_keyword = finite automaton, wiki_title = Quantum finite automaton, avg_score = 0.330988347530365
+[Connect] csv_keyword = finite automaton, wiki_title = Two-way finite automaton, avg_score = 0.842143177986145
+[Connect] csv_keyword = finite automaton, wiki_title = Automata theory, avg_score = 0.4073369801044464
+[Connect] csv_keyword = finite automaton, wiki_title = Nondeterministic finite automaton, avg_score = 0.4011709988117218
+[Connect] csv_keyword = finite automaton, wiki_title = Tree automaton, avg_score = 0.25608083605766296
+[Connect] csv_keyword = finite automaton, wiki_title = DFA minimization, avg_score = 0.48441043496131897
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = string, wiki_title = String (computer science), avg_score = 0.285397469997406
+Cannot Find any page! Continue next
+[Connect] csv_keyword = string, wiki_title = Query string, avg_score = 0.35162830352783203
+[Connect] csv_keyword = string, wiki_title = String instrument, avg_score = 0.41254952549934387
+Cannot Find any page! Continue next
+[Connect] csv_keyword = string, wiki_title = String metric, avg_score = 0.3397868871688843
+[Connect] csv_keyword = string, wiki_title = Twelve-string guitar, avg_score = 0.3184298276901245
+[Connect] csv_keyword = string, wiki_title = Guitar, avg_score = 0.439490407705307
+[Connect] csv_keyword = language model, wiki_title = Language model, avg_score = 0.2566109597682953
+[Connect] csv_keyword = language model, wiki_title = Large language model, avg_score = 0.37340423464775085
+[Connect] csv_keyword = language model, wiki_title = BERT (language model), avg_score = 0.3032025396823883
+[Connect] csv_keyword = language model, wiki_title = BLOOM (language model), avg_score = 0.6029237508773804
+[Connect] csv_keyword = language model, wiki_title = Modeling language, avg_score = 0.4856119155883789
+[Connect] csv_keyword = language model, wiki_title = Systems Modeling Language, avg_score = 0.3875236511230469
+Cannot Find any page! Continue next
+[Connect] csv_keyword = language model, wiki_title = Transformer (machine learning model), avg_score = 0.28473228216171265
+[Connect] csv_keyword = generative model, wiki_title = Generative model, avg_score = 0.6412380337715149
+[Connect] csv_keyword = generative model, wiki_title = Generative adversarial network, avg_score = 0.5245630741119385
+[Connect] csv_keyword = generative model, wiki_title = Flow-based generative model, avg_score = 0.4341200292110443
+[Connect] csv_keyword = generative model, wiki_title = Generative pre-trained transformer, avg_score = 0.30389440059661865
+Cannot Find any page! Continue next
+[Connect] csv_keyword = generative model, wiki_title = Discriminative model, avg_score = 0.5652732253074646
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = language modeling approach, wiki_title = Modeling language, avg_score = 0.44065025448799133
+[Connect] csv_keyword = language modeling approach, wiki_title = Large language model, avg_score = 0.31445205211639404
+[Connect] csv_keyword = language modeling approach, wiki_title = Object–role modeling, avg_score = 0.3005138635635376
+[Connect] csv_keyword = language modeling approach, wiki_title = Meta-process modeling, avg_score = 0.3585359752178192
+[Connect] csv_keyword = language modeling approach, wiki_title = Data modeling, avg_score = 0.46881404519081116
+[Connect] csv_keyword = language modeling approach, wiki_title = Object-modeling technique, avg_score = 0.27515333890914917
+[Connect] csv_keyword = document, wiki_title = Document, avg_score = 0.30036041140556335
+[Connect] csv_keyword = document, wiki_title = Identity document, avg_score = 0.4090593755245209
+[Connect] csv_keyword = document, wiki_title = Document management system, avg_score = 0.3256469964981079
+[Connect] csv_keyword = document, wiki_title = PDF, avg_score = 0.34066760540008545
+[Connect] csv_keyword = document, wiki_title = Travel document, avg_score = 0.2719257175922394
+[Connect] csv_keyword = document, wiki_title = Electronic document, avg_score = 0.3622000217437744
+[Connect] csv_keyword = document, wiki_title = Commission (document), avg_score = 0.2576832175254822
+[Connect] csv_keyword = document, wiki_title = Document classification, avg_score = 0.4199959933757782
+[Connect] csv_keyword = document, wiki_title = False document, avg_score = 0.4306929111480713
+Cannot Find any page! Continue next
+[Connect] csv_keyword = probabilistic language model, wiki_title = Probabilistic programming, avg_score = 0.3606274724006653
+[Connect] csv_keyword = probabilistic language model, wiki_title = Probabilistic context-free grammar, avg_score = 0.5982036590576172
+[Connect] csv_keyword = probabilistic language model, wiki_title = Word embedding, avg_score = 0.5107738375663757
+[Connect] csv_keyword = probabilistic language model, wiki_title = Probabilistic automaton, avg_score = 0.4453624188899994
+[Connect] csv_keyword = probabilistic language model, wiki_title = Factored language model, avg_score = 0.4050746262073517
+[Connect] csv_keyword = probabilistic approach, wiki_title = Probabilistic Turing machine, avg_score = 0.256937712430954
+[Connect] csv_keyword = probabilistic approach, wiki_title = Probabilistic design, avg_score = 0.3664880692958832
+[Connect] csv_keyword = probabilistic approach, wiki_title = Uncertainty quantification, avg_score = 0.2766856849193573
+[Connect] csv_keyword = probabilistic approach, wiki_title = Probabilistic logic, avg_score = 0.41797634959220886
+[Connect] csv_keyword = probabilistic approach, wiki_title = Probabilistic encryption, avg_score = 0.4523281157016754
+[Connect] csv_keyword = probabilistic approach, wiki_title = Graphical model, avg_score = 0.434712290763855
+Cannot Find any page! Continue next
+[Connect] csv_keyword = query likelihood model, wiki_title = Query likelihood model, avg_score = 0.36540573835372925
+[Connect] csv_keyword = query likelihood model, wiki_title = Ranking (information retrieval), avg_score = 0.29945695400238037
+[Connect] csv_keyword = query likelihood model, wiki_title = G-test, avg_score = 0.2507162392139435
+[Connect] csv_keyword = term, wiki_title = Team, avg_score = 0.26548832654953003
+[Connect] csv_keyword = term, wiki_title = 86 (term), avg_score = 0.2625259459018707
+[Connect] csv_keyword = term, wiki_title = Cracker (term), avg_score = 0.26810601353645325
+[Connect] csv_keyword = term, wiki_title = Term paper, avg_score = 0.4587766230106354
+Cannot Find any page! Continue next
+[Connect] csv_keyword = term, wiki_title = Term limit, avg_score = 0.28951218724250793
+[Connect] csv_keyword = term, wiki_title = Michaelmas term, avg_score = 0.2587999105453491
+[Connect] csv_keyword = term, wiki_title = Term of office, avg_score = 0.3424402177333832
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = ir, wiki_title = Infrared, avg_score = 0.38434508442878723
+[Connect] csv_keyword = ir, wiki_title = Infrared spectroscopy, avg_score = 0.3695814311504364
+[Connect] csv_keyword = ir, wiki_title = IR welding, avg_score = 0.34100863337516785
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = ir, wiki_title = Shair, avg_score = 0.26306450366973877
+[iir-4.6.csv]
+Cannot Find any page! Continue next
+[Connect] csv_keyword = post, wiki_title = The Washington Post, avg_score = 0.2555767893791199
+[Connect] csv_keyword = post, wiki_title = Post-punk, avg_score = 0.27499446272850037
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = post, wiki_title = HuffPost, avg_score = 0.2809349596500397
+[Connect] csv_keyword = post, wiki_title = Apocalyptic and post-apocalyptic fiction, avg_score = 0.2716936469078064
+Cannot Find any page! Continue next
+[Connect] csv_keyword = user membership, wiki_title = System for Cross-domain Identity Management, avg_score = 0.4511388838291168
+Cannot Find any page! Continue next
+[Connect] csv_keyword = user membership, wiki_title = Water user board, avg_score = 0.3944450914859772
+[Connect] csv_keyword = user membership, wiki_title = User Account Control, avg_score = 0.4564255475997925
+Cannot Find any page! Continue next
+[Connect] csv_keyword = token, wiki_title = Sleep Token, avg_score = 0.3139342963695526
+Cannot Find any page! Continue next
+[Connect] csv_keyword = token, wiki_title = Tokenism, avg_score = 0.41184917092323303
+[Connect] csv_keyword = token, wiki_title = Lexical analysis, avg_score = 0.41323497891426086
+Cannot Find any page! Continue next
+[Connect] csv_keyword = token, wiki_title = JSON Web Token, avg_score = 0.40588533878326416
+[Connect] csv_keyword = token, wiki_title = Type–token distinction, avg_score = 0.3297172784805298
+[Connect] csv_keyword = docid, wiki_title = Pallbearer, avg_score = 0.25377359986305237
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = acl, wiki_title = Anterior cruciate ligament injury, avg_score = 0.5243834853172302
+[Connect] csv_keyword = acl, wiki_title = Access-control list, avg_score = 0.431586354970932
+Cannot Find any page! Continue next
+[Connect] csv_keyword = acl, wiki_title = Anterior cruciate ligament reconstruction, avg_score = 0.43528762459754944
+[Connect] csv_keyword = acl, wiki_title = ACL Cables, avg_score = 0.3126089870929718
+[Connect] csv_keyword = queri, wiki_title = Luna Sharpshooters, avg_score = 0.28995025157928467
+[Connect] csv_keyword = queri, wiki_title = Quirites, avg_score = 0.3153051435947418
+[Connect] csv_keyword = queri, wiki_title = Philippine Revolutionary Army, avg_score = 0.28786197304725647
+[Connect] csv_keyword = queri, wiki_title = Latin conjugation, avg_score = 0.2935495972633362
+[Connect] csv_keyword = queri, wiki_title = Antonio Luna, avg_score = 0.41307520866394043
+[Connect] csv_keyword = queri, wiki_title = Toʼabaita language, avg_score = 0.3369905948638916
+[Connect] csv_keyword = queri, wiki_title = Voss, avg_score = 0.25320833921432495
+[Connect] csv_keyword = queri, wiki_title = 2022 NCAA Division I women's soccer tournament, avg_score = 0.33343011140823364
+Cannot Find any page! Continue next
+[Connect] csv_keyword = information retrieval system, wiki_title = Evaluation measures (information retrieval), avg_score = 0.45223626494407654
+[Connect] csv_keyword = information retrieval system, wiki_title = SMART Information Retrieval System, avg_score = 0.4057251513004303
+[Connect] csv_keyword = information retrieval system, wiki_title = Relevance (information retrieval), avg_score = 0.30347052216529846
+[Connect] csv_keyword = information retrieval system, wiki_title = Music information retrieval, avg_score = 0.40159881114959717
+[Connect] csv_keyword = information retrieval system, wiki_title = Cross-language information retrieval, avg_score = 0.3801952600479126
+[Connect] csv_keyword = information retrieval system, wiki_title = Cognitive models of information retrieval, avg_score = 0.4088304340839386
+[Connect] csv_keyword = information retrieval system, wiki_title = Thesaurus (information retrieval), avg_score = 0.39493462443351746
+[Connect] csv_keyword = information retrieval system, wiki_title = Legal information retrieval, avg_score = 0.4115867614746094
+[Connect] csv_keyword = algorithm, wiki_title = Algorithm, avg_score = 0.4779823422431946
+Cannot Find any page! Continue next
+[Connect] csv_keyword = algorithm, wiki_title = Sorting algorithm, avg_score = 0.4603019654750824
+[Connect] csv_keyword = algorithm, wiki_title = Dijkstra's algorithm, avg_score = 0.37992122769355774
+[Connect] csv_keyword = algorithm, wiki_title = Algorithm, avg_score = 0.4779823422431946
+[Connect] csv_keyword = algorithm, wiki_title = Euclidean algorithm, avg_score = 0.33324649930000305
+[Connect] csv_keyword = algorithm, wiki_title = Algorithmics, avg_score = 0.43498626351356506
+[Connect] csv_keyword = algorithm, wiki_title = Kruskal's algorithm, avg_score = 0.3278464674949646
+[Connect] csv_keyword = algorithm, wiki_title = Karatsuba algorithm, avg_score = 0.48343625664711
+[Connect] csv_keyword = algorithm, wiki_title = Genetic algorithm, avg_score = 0.3031535744667053
+[Connect] csv_keyword = positional index, wiki_title = Positional asphyxia, avg_score = 0.2825201749801636
+Cannot Find any page! Continue next
+[Connect] csv_keyword = access control list, wiki_title = Access-control list, avg_score = 0.5702577233314514
+[Connect] csv_keyword = access control list, wiki_title = Access control, avg_score = 0.43704676628112793
+[Connect] csv_keyword = access control list, wiki_title = Role-based access control, avg_score = 0.4576506018638611
+[Connect] csv_keyword = access control list, wiki_title = Attribute-based access control, avg_score = 0.4922761023044586
+[Connect] csv_keyword = access control list, wiki_title = Discretionary access control, avg_score = 0.4225001335144043
+[Connect] csv_keyword = access control list, wiki_title = Mandatory access control, avg_score = 0.27039456367492676
+[Connect] csv_keyword = access control list, wiki_title = Computer access control, avg_score = 0.4068242609500885
+[Connect] csv_keyword = access control list, wiki_title = Access control matrix, avg_score = 0.26426705718040466
+[Connect] csv_keyword = access control list, wiki_title = Mantrap (access control), avg_score = 0.2837177813053131
+[Connect] csv_keyword = query process, wiki_title = Query language, avg_score = 0.5061571598052979
+[Connect] csv_keyword = query process, wiki_title = Database, avg_score = 0.362565279006958
+[Connect] csv_keyword = query process, wiki_title = Data integration, avg_score = 0.33815035223960876
+Cannot Find any page! Continue next
+[Connect] csv_keyword = query process, wiki_title = Microsoft SQL Server, avg_score = 0.3702487051486969
+[Connect] csv_keyword = query process, wiki_title = Query understanding, avg_score = 0.48012101650238037
+Cannot Find any page! Continue next
+[Connect] csv_keyword = query process, wiki_title = Enterprise search, avg_score = 0.3259075880050659
+Cannot Find any page! Continue next
+[Connect] csv_keyword = postings list, wiki_title = Posting style, avg_score = 0.3278775215148926
+[Connect] csv_keyword = postings list, wiki_title = Posting system, avg_score = 0.3353039622306824
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = index, wiki_title = Biography Index, avg_score = 0.2868952751159668
+[Connect] csv_keyword = index, wiki_title = Democracy Index, avg_score = 0.3141874670982361
+[Connect] csv_keyword = index, wiki_title = Big Mac Index, avg_score = 0.26206520199775696
+[Connect] csv_keyword = index, wiki_title = H-index, avg_score = 0.3095000982284546
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = user's access list, wiki_title = Access-control list, avg_score = 0.4610591530799866
+[Connect] csv_keyword = user's access list, wiki_title = Role-based access control, avg_score = 0.371770441532135
+[Connect] csv_keyword = user's access list, wiki_title = Basic access authentication, avg_score = 0.3321548402309418
+[Connect] csv_keyword = user's access list, wiki_title = Access control, avg_score = 0.36072051525115967
+[Connect] csv_keyword = user-document matrix, wiki_title = Document-term matrix, avg_score = 0.3598982095718384
+[Connect] csv_keyword = user-document matrix, wiki_title = Non-negative matrix factorization, avg_score = 0.28313273191452026
+[Connect] csv_keyword = user-document matrix, wiki_title = Matrix (mathematics), avg_score = 0.3821486532688141
+[Connect] csv_keyword = user-document matrix, wiki_title = Document classification, avg_score = 0.3775637745857239
+[Connect] csv_keyword = user-document matrix, wiki_title = Matrix completion, avg_score = 0.2933562695980072
+[Connect] csv_keyword = file system, wiki_title = File system, avg_score = 0.6378388404846191
+[Connect] csv_keyword = file system, wiki_title = File system, avg_score = 0.6378388404846191
+[Connect] csv_keyword = file system, wiki_title = InterPlanetary File System, avg_score = 0.5604495406150818
+[Connect] csv_keyword = file system, wiki_title = Clustered file system, avg_score = 0.4141584038734436
+[Connect] csv_keyword = file system, wiki_title = Hierarchical file system, avg_score = 0.47689056396484375
+[Connect] csv_keyword = file system, wiki_title = File-system permissions, avg_score = 0.37078964710235596
+[Connect] csv_keyword = file system, wiki_title = Virtual file system, avg_score = 0.5971210598945618
+[Connect] csv_keyword = document, wiki_title = Document, avg_score = 0.30036041140556335
+[Connect] csv_keyword = document, wiki_title = Identity document, avg_score = 0.4090593755245209
+[Connect] csv_keyword = document, wiki_title = Document management system, avg_score = 0.3256469964981079
+[Connect] csv_keyword = document, wiki_title = PDF, avg_score = 0.34066760540008545
+[Connect] csv_keyword = document, wiki_title = Travel document, avg_score = 0.2719257175922394
+[Connect] csv_keyword = document, wiki_title = Electronic document, avg_score = 0.3622000217437744
+[Connect] csv_keyword = document, wiki_title = Commission (document), avg_score = 0.2576832175254822
+[Connect] csv_keyword = document, wiki_title = Document classification, avg_score = 0.4199959933757782
+[Connect] csv_keyword = document, wiki_title = False document, avg_score = 0.4306929111480713
+Traceback (most recent call last):
+  File "/home/gyuseok/Upitt/python/Wikipedia.py", line 168, in <module>
+    main()
+  File "/home/gyuseok/Upitt/python/Wikipedia.py", line 129, in main
+    wiki_keywords = get_keywords(summary, keyword_model, keyword_tokenizer, device)
+  File "/home/gyuseok/Upitt/python/Wikipedia.py", line 32, in get_keywords
+    output = model.generate(input_ids, no_repeat_ngram_size=3, num_beams=4)
+  File "/home/gyuseok/anaconda3/envs/Upitt/lib/python3.9/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/gyuseok/anaconda3/envs/Upitt/lib/python3.9/site-packages/transformers/generation/utils.py", line 1268, in generate
+    model_kwargs = self._prepare_encoder_decoder_kwargs_for_generation(
+  File "/home/gyuseok/anaconda3/envs/Upitt/lib/python3.9/site-packages/transformers/generation/utils.py", line 634, in _prepare_encoder_decoder_kwargs_for_generation
+    model_kwargs["encoder_outputs"]: ModelOutput = encoder(**encoder_kwargs)
+  File "/home/gyuseok/anaconda3/envs/Upitt/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/gyuseok/anaconda3/envs/Upitt/lib/python3.9/site-packages/transformers/models/t5/modeling_t5.py", line 1074, in forward
+    layer_outputs = layer_module(
+  File "/home/gyuseok/anaconda3/envs/Upitt/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/gyuseok/anaconda3/envs/Upitt/lib/python3.9/site-packages/transformers/models/t5/modeling_t5.py", line 693, in forward
+    self_attention_outputs = self.layer[0](
+  File "/home/gyuseok/anaconda3/envs/Upitt/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/gyuseok/anaconda3/envs/Upitt/lib/python3.9/site-packages/transformers/models/t5/modeling_t5.py", line 600, in forward
+    attention_output = self.SelfAttention(
+  File "/home/gyuseok/anaconda3/envs/Upitt/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/gyuseok/anaconda3/envs/Upitt/lib/python3.9/site-packages/transformers/models/t5/modeling_t5.py", line 542, in forward
+    position_bias = self.compute_bias(real_seq_length, key_length, device=scores.device)
+  File "/home/gyuseok/anaconda3/envs/Upitt/lib/python3.9/site-packages/transformers/models/t5/modeling_t5.py", line 449, in compute_bias
+    values = self.relative_attention_bias(relative_position_bucket)  # shape (query_length, key_length, num_heads)
+  File "/home/gyuseok/anaconda3/envs/Upitt/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/gyuseok/anaconda3/envs/Upitt/lib/python3.9/site-packages/torch/nn/modules/sparse.py", line 158, in forward
+    return F.embedding(
+  File "/home/gyuseok/anaconda3/envs/Upitt/lib/python3.9/site-packages/torch/nn/functional.py", line 2199, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+RuntimeError: CUDA out of memory. Tried to allocate 9.23 GiB (GPU 0; 23.70 GiB total capacity; 13.63 GiB already allocated; 9.02 GiB free; 13.73 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

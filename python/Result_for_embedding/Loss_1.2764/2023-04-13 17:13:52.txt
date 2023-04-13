@@ -1,0 +1,1 @@
+Namespace(data_path='./Dataset', result_path='./Result_for_embedding', rwl=40, window_size=5, num_negative=3, batch_size=128, lr=0.01, scheduler=0, epochs=1000)

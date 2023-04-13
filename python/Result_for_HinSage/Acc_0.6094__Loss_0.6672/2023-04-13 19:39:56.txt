@@ -1,0 +1,3 @@
+Namespace(batch_size=200, data_path='./Dataset', drop_out=0.3, emb_path='./Result_for_embedding/Loss_1.2498', epochs=100, layer_sizes=[32, 16], lr=0.005, num_folds=5, num_samples=[8, 4], num_workers=-1, result_path='./Result_for_HinSage', weight_toggle=False)
+test_acc = 0.6094
+test_loss = 0.6672

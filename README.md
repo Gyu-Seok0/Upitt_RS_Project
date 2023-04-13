@@ -7,8 +7,8 @@
   ### Methods
     (1) Create a graph: WikiAPI + Keyword Network + Sentence Simiarity Network
     (2) Get Embedding: Deepwalk or MetaPath2Vec
-    
-    (3) [Link prediction: Heterogenous GraphSage](https://stellargraph.readthedocs.io/en/stable/demos/link-prediction/hinsage-link-prediction.html)
+    (3) Link Predcition: Heterogenous GraphSage
+   [Document](https://stellargraph.readthedocs.io/en/stable/demos/link-prediction/hinsage-link-prediction.html, "Link_Prediction")
 
 
 [google] (https://n.news.naver.com/article/025/0003272973?ntype=RANKING)

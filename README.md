@@ -15,7 +15,7 @@
 
 
 ### [Jupyter Notebook]
-'''
+```
 #### 1. create a graph
 * Preprocess.ipynb (make a csv file to get all of information, csv_keywords_df.csv)
 * Wikipedia.ipynb (make four csv file to link csv and wiki, (csv_dict.pickle, wiki_dict.pickle, csv2wiki.pickle, wiki2csv.pickle))
@@ -25,10 +25,10 @@
 
 #### 3. link prediction
 * weighted_link_prediction.ipynb
-'''
+```
 
 #### Note
-We save all files as pickle
-We use libraries like Pytorch, tensorflow, dgl, stellargraph
+We save all files as pickle <br>
+We use libraries like Pytorch, tensorflow, dgl, stellargraph <br>
 [Link Predcition: Heterogenous GraphSage](https://stellargraph.readthedocs.io/en/stable/demos/link-prediction/hinsage-link-prediction.html, "Link_Prediction")
 

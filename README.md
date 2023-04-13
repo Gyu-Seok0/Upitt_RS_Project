@@ -1,21 +1,15 @@
 # Upitt_RS_Project
 
-  ### GOAL: How to recommend contents(e.g., Wikipedia or Youtube) to students given context(e.g., textbook pdf)
+  ### GOAL: How to recommend contents to students given context
+  
+  ### Assume: contents = Wikipedia or Youtube // Context = textbook pdf
 
-  ### Approach: (1) Create a graph -> (2) Get a embedding for each node -> (3) link prediction
+  ### Approach: (1) Create a graph (2) Get a embedding for each node (3) link prediction
   
   ### Methods
     (1) Create a graph: WikiAPI + Keyword Network + Sentence Simiarity Network
     (2) Get Embedding: Deepwalk or MetaPath2Vec
     (3) Link Predcition: Heterogenous GraphSage
-   [Document](https://stellargraph.readthedocs.io/en/stable/demos/link-prediction/hinsage-link-prediction.html, "Link_Prediction")
-
-
-[google] (https://n.news.naver.com/article/025/0003272973?ntype=RANKING)
-
-
-
-
 
 
 
@@ -34,5 +28,7 @@
 '''
 
 #### Note
-* We save all files as pickle
-* We use libraries like Pytorch, tensorflow, dgl, stellargraph
+We save all files as pickle
+We use libraries like Pytorch, tensorflow, dgl, stellargraph
+[Link Predcition: Heterogenous GraphSage](https://stellargraph.readthedocs.io/en/stable/demos/link-prediction/hinsage-link-prediction.html, "Link_Prediction")
+

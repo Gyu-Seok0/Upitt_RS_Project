@@ -11,7 +11,7 @@
     (3) [Link prediction: Heterogenous GraphSage](https://stellargraph.readthedocs.io/en/stable/demos/link-prediction/hinsage-link-prediction.html)
 
 
-
+[google] (https://n.news.naver.com/article/025/0003272973?ntype=RANKING)
 
 
 

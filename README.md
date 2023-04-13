@@ -1,6 +1,6 @@
 # Upitt_RS_Project
 
-  ### GOAL: How to recommend contents(e.g., Wikipedia or Youtube) to students given context(e.g., textbook pdf)
+<h3 style = "color:red">  GOAL: How to recommend contents(e.g., Wikipedia or Youtube) to students given context(e.g., textbook pdf) </h3>
 
   ### Approach: (1) Create a graph -> (2) Get a embedding for each node -> (3) link prediction
 

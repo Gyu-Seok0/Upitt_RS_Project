@@ -1,9 +1,8 @@
 # Upitt_RS_Project
 
+  ### GOAL: How to recommend contents(e.g., Wikipedia or Youtube) to students given context(e.g., textbook pdf)
 
-  ## GOAL: How to recommend matetrials to students given context(e.g., textbook pdf) </b>
-
-  ## Process: (1) create a graph -> (2) get a embedding for each node -> (3) link prediction </b>
+  ### Approach: (1) Create a graph -> (2) Get a embedding for each node -> (3) link prediction
 
 
 

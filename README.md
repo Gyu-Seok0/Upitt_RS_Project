@@ -47,5 +47,5 @@
   ### [Note]
   We save all files as pickle <br>
   We use libraries and deeplearning frameworks like pytorch, tensorflow, dgl, stellargraph and so on.<br>
-  Document: [Link Predcition by using Heterogenous GraphSage](https://stellargraph.readthedocs.io/en/stable/demos/link-prediction/hinsage-link-prediction.html, "Link_Prediction")
+  Document: [Link Predcition by using Heterogenous GraphSage](https://stellargraph.readthedocs.io/en/stable/demos/link-prediction/hinsage-link-prediction.html "Link_Prediction")
 

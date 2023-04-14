@@ -3,12 +3,14 @@
   ### GOAL
   <b> How to recommend contents to students given context </b>
   
-  ### Assume
+  ### Data
   Contents : Wikipedia or Youtube <br>
   Context : textbook pdf
 
   ### Approach
-  (1) Create a graph (2) Get a embedding for each node (3) link prediction
+  (1) Create a graph <br>
+  (2) Get a embedding for each node <br>
+  (3) link prediction
   
   ### Methods
     (1) Create a graph: WikiAPI + Keyword Network + Sentence Simiarity Network
@@ -46,6 +48,7 @@
 
   ### [Note]
   We save all files as pickle <br>
-  We use libraries and deeplearning frameworks like pytorch, tensorflow, dgl, stellargraph and so on.<br>
+  We use libraries and frameworks like pytorch, tensorflow, dgl, stellargraph and so on.<br>
+  Keyword Network and Sentence Simiarity Network are based on BERT, which are provided from HuggingFace. <br>
   Document: [Link Predcition by using Heterogenous GraphSage](https://stellargraph.readthedocs.io/en/stable/demos/link-prediction/hinsage-link-prediction.html "Link_Prediction")
 

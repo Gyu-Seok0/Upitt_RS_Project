@@ -50,5 +50,5 @@
   * We save all files as pickle <br>
   * We use libraries and frameworks like pytorch, tensorflow, dgl, stellargraph and so on.<br>
   * Keyword Network and Sentence Simiarity Network are based on BERT, which are provided from HuggingFace. <br>
-  Useful Document: [Link Predcition by using Heterogenous GraphSage](https://stellargraph.readthedocs.io/en/stable/demos/link-prediction/hinsage-link-prediction.html "Link_Prediction")
+  * Useful Document: [Link Predcition by using Heterogenous GraphSage](https://stellargraph.readthedocs.io/en/stable/demos/link-prediction/hinsage-link-prediction.html "Link_Prediction")
 

@@ -1,4 +1,4 @@
-# Upitt_RS_Project
+# Upitt RS Project
 
   ### GOAL
   <b> How to recommend contents to students given context </b>

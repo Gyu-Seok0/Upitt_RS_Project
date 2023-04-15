@@ -1,0 +1,4 @@
+Namespace(data_path='./Dataset/Standford', result_path='./Result_for_embedding/Standford', rwl=40, window_size=5, num_negative=3, batch_size=128, lr=0.02, scheduler=1, epochs=1000)
+ num_csv = 21
+ num_wiki = 317
+ min_loss = 1.1795

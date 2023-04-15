@@ -177,6 +177,9 @@ def main(args):
     now_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     with open(f"{result_path}/{now_time}.txt", "w") as f:
         f.write(str(args))
+        f.write(f"\n num_csv = {num_csv}")
+        f.write(f"\n num_wiki = {num_wiki}")
+        f.write(f"\n min_loss = {min_loss:.4f}")
 
 
 if __name__ == "__main__":
@@ -184,12 +187,12 @@ if __name__ == "__main__":
 
     parser.add_argument("--data_path",
                         type = str,
-                        default = "./Dataset",
+                        default = "./Dataset/Total",
                         help = "the path of dataset")
     
     parser.add_argument("--result_path",
                         type = str,
-                        default = "./Result_for_embedding",
+                        default = "./Result_for_embedding/Total",
                         help = "the path of Result_for_embedding")
     
     parser.add_argument("--rwl",

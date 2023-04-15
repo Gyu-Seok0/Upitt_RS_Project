@@ -84,12 +84,12 @@ def train_test_graph_split(graph: StellarGraph) -> tuple:
 
     edge_splitter_test = EdgeSplitter(graph)
     G_test, edge_ids_test, edge_labels_test = edge_splitter_test.train_test_split(
-    p=0.005, method="global", keep_connected=True, edge_label = "default", 
+    p=0.02, method="global", keep_connected=True, edge_label = "default", 
     )
 
     edge_splitter_train = EdgeSplitter(G_test)
     G_train, edge_ids_train, edge_labels_train = edge_splitter_train.train_test_split(
-    p=0.0075, method="global", keep_connected=True, edge_label = "default"
+    p=0.021, method="global", keep_connected=True, edge_label = "default"
     )
 
     return (G_train, edge_ids_train, edge_labels_train,

@@ -1,3 +1,4 @@
+import argparse
 import pandas as pd
 import ast
 import wikipedia as wiki
@@ -65,7 +66,7 @@ def get_gpu():
     gc.collect()
     torch.cuda.empty_cache()
 
-def main():
+def main(args):
 
     # device
     # device = 'cuda:1' if torch.cuda.is_available() else 'cpu'
@@ -74,8 +75,9 @@ def main():
 
 
     # load dataset
-    ck_df = pd.read_csv("../csv_keywords_df.csv")
+    ck_df = pd.read_csv(args.df_path)
     ck_df["keywords"] = ck_df['keywords'].apply(lambda x: ast.literal_eval(x))
+
 
     # keywords extraction model from wiki text
     keyword_model = T5ForConditionalGeneration.from_pretrained("Voicelab/vlt5-base-keywords").to(device)
@@ -171,10 +173,19 @@ def main():
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
 
+    parser.add_argument("--df_path", type = str, default = "../Stanford_NLP_df.csv", help = "the path of csv2keywords")
+
+    args = parser.parse_args()
+
+    print(args)
     print("[Start] Making connection")
-    main()
+
+    main(args)
+
     print("[Done] Making connection")
+    print(args)
 
 
 ''' Future work

@@ -1,0 +1,3 @@
+Namespace(batch_size=200, data_path='./Dataset/Standford', drop_out=0.3, emb_path='./Result_for_embedding/Standford/Loss_1.1484', epochs=100, layer_sizes=[16, 8], lr=0.005, num_folds=5, num_samples=[8, 4], num_workers=-1, result_path='./Result_for_HinSage/Standford', weight_toggle=False)
+test_acc = 0.6667
+test_loss = 0.651

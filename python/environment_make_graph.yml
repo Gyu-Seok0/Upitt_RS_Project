@@ -1,4 +1,4 @@
-name: make_graph
+name: Upitt
 channels:
   - pytorch
   - defaults

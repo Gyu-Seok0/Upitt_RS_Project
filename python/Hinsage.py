@@ -151,17 +151,17 @@ if __name__ == "__main__":
 
     parser.add_argument("--data_path",
                         type = str,
-                        default = "./Dataset",
+                        default = "./Dataset/Total",
                         help = "path of data")
     
     parser.add_argument("--emb_path",
                         type = str,
-                        default = "./Result_for_embedding/Loss_1.2498",
+                        default = "./Result_for_embedding/Total/Loss_1.2758",
                         help = "path of embedding")
     
     parser.add_argument("--result_path",
                         type = str,
-                        default = "./Result_for_HinSage",
+                        default = "./Result_for_HinSage/Total",
                         help = "path of data")
 
     parser.add_argument("--weight_toggle",
@@ -176,12 +176,12 @@ if __name__ == "__main__":
     
     parser.add_argument("--num_samples",
                         type = list,
-                        default = [8, 4],
+                        default = [4, 2],
                         help = "the number of neighbors for each hop")
     
     parser.add_argument("--layer_sizes",
                         type = list,
-                        default = [32, 16],
+                        default = [16, 8],
                         help = "the size of layer for each hop")   
     
     parser.add_argument("--batch_size",
@@ -190,15 +190,15 @@ if __name__ == "__main__":
     
     parser.add_argument("--epochs",
                         type = int,
-                        default = 100)
+                        default = 1000)
     
     parser.add_argument("--lr",
                         type = float,
-                        default = 0.005)
+                        default = 0.001)
     
     parser.add_argument("--drop_out",
                         type = float,
-                        default = 0.3)
+                        default = 0.4)
     
     parser.add_argument("--num_workers",
                         type = int,

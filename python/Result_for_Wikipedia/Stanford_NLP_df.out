@@ -1,0 +1,905 @@
+Namespace(df_path='../Stanford_NLP_df.csv')
+[Start] Making connection
+device = cpu
+[Boolean retrieval]
+/home/gyuseok/anaconda3/envs/Upitt/lib/python3.9/site-packages/wikipedia/wikipedia.py:389: GuessedAtParserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("lxml"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+The code that caused this warning is on line 389 of the file /home/gyuseok/anaconda3/envs/Upitt/lib/python3.9/site-packages/wikipedia/wikipedia.py. To get rid of this warning, pass the additional argument 'features="lxml"' to the BeautifulSoup constructor.
+
+  lis = BeautifulSoup(html).find_all('li')
+Cannot Find any page! Continue next
+Asking to truncate to max_length but no maximum length is provided and the model has no predefined maximum length. Default to no truncation.
+/home/gyuseok/anaconda3/envs/Upitt/lib/python3.9/site-packages/transformers/generation/utils.py:1288: UserWarning: Using `max_length`'s default (20) to control the generation length. This behaviour is deprecated and will be removed from the config in v5 of Transformers -- we recommend using `max_new_tokens` to control the maximum length of the generation.
+  warnings.warn(
+[Connect] csv_keyword = index, wiki_title = Book Review Index, avg_score = 0.292535662651062
+[Connect] csv_keyword = index, wiki_title = Democracy Index, avg_score = 0.3141874670982361
+[Connect] csv_keyword = index, wiki_title = Biography Index, avg_score = 0.2868952751159668
+[Connect] csv_keyword = index, wiki_title = Colour Index International, avg_score = 0.2857038378715515
+[Connect] csv_keyword = document, wiki_title = Document, avg_score = 0.30036041140556335
+[Connect] csv_keyword = document, wiki_title = Identity document, avg_score = 0.4090593755245209
+[Connect] csv_keyword = document, wiki_title = PDF, avg_score = 0.34066760540008545
+[Connect] csv_keyword = document, wiki_title = Document Object Model, avg_score = 0.4506251811981201
+[Connect] csv_keyword = document, wiki_title = Electronic document, avg_score = 0.3622000217437744
+[Connect] csv_keyword = document, wiki_title = False document, avg_score = 0.4306929111480713
+[Connect] csv_keyword = document, wiki_title = Commission (document), avg_score = 0.2576832175254822
+[Connect] csv_keyword = document, wiki_title = Document management system, avg_score = 0.3256469964981079
+[Connect] csv_keyword = document, wiki_title = Document classification, avg_score = 0.4199959933757782
+[Connect] csv_keyword = document, wiki_title = Document processing, avg_score = 0.3655487596988678
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = search, wiki_title = The Searchers, avg_score = 0.32712435722351074
+[Connect] csv_keyword = search, wiki_title = The Search, avg_score = 0.34625744819641113
+[Connect] csv_keyword = search, wiki_title = Search engine optimization, avg_score = 0.33732977509498596
+[Connect] csv_keyword = search, wiki_title = Semantic search, avg_score = 0.49174782633781433
+[Connect] csv_keyword = search, wiki_title = Microsoft Bing, avg_score = 0.40043213963508606
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = inform, wiki_title = InformNapalm, avg_score = 0.3497062921524048
+[Connect] csv_keyword = inform, wiki_title = Information content, avg_score = 0.41675567626953125
+[Connect] csv_keyword = inform, wiki_title = Inform version history, avg_score = 0.6193450689315796
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = data, wiki_title = Data science, avg_score = 0.49941009283065796
+[Connect] csv_keyword = data, wiki_title = Big data, avg_score = 0.4669627249240875
+[Connect] csv_keyword = data, wiki_title = Personal data, avg_score = 0.5174205303192139
+[Connect] csv_keyword = data, wiki_title = Data set, avg_score = 0.5342745780944824
+[Connect] csv_keyword = data, wiki_title = Data processing, avg_score = 0.5916885137557983
+[Connect] csv_keyword = data, wiki_title = Data storage, avg_score = 0.32126012444496155
+[Connect] csv_keyword = data, wiki_title = Data analysis, avg_score = 0.3318449854850769
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = queri, wiki_title = Luna Sharpshooters, avg_score = 0.28995025157928467
+[Connect] csv_keyword = queri, wiki_title = Quirites, avg_score = 0.3153051435947418
+[Connect] csv_keyword = queri, wiki_title = Philippine Revolutionary Army, avg_score = 0.28786197304725647
+[Connect] csv_keyword = queri, wiki_title = Latin conjugation, avg_score = 0.2935495972633362
+[Connect] csv_keyword = queri, wiki_title = Toʼabaita language, avg_score = 0.3369905948638916
+[Connect] csv_keyword = queri, wiki_title = Antonio Luna, avg_score = 0.41307520866394043
+[Connect] csv_keyword = queri, wiki_title = List of rulers of Auvergne, avg_score = 0.25385716557502747
+[Connect] csv_keyword = queri, wiki_title = Voss, avg_score = 0.25320833921432495
+Cannot Find any page! Continue next
+[Connect] csv_keyword = searcher, wiki_title = IAI Searcher, avg_score = 0.3049086630344391
+[Connect] csv_keyword = searcher, wiki_title = Wine-Searcher, avg_score = 0.3673397898674011
+Cannot Find any page! Continue next
+[Connect] csv_keyword = searcher, wiki_title = The Searchers, avg_score = 0.33511674404144287
+Cannot Find any page! Continue next
+[Connect] csv_keyword = searcher, wiki_title = The Search, avg_score = 0.2597252428531647
+[Connect] csv_keyword = searcher, wiki_title = USS Searcher, avg_score = 0.35069042444229126
+[Connect] csv_keyword = searcher, wiki_title = HMS Searcher (D40), avg_score = 0.41962555050849915
+[The term vocabulary and postings lists]
+[Connect] csv_keyword = linguist, wiki_title = Linguistics, avg_score = 0.4868283271789551
+[Connect] csv_keyword = linguist, wiki_title = The Linguist, avg_score = 0.4671526849269867
+Cannot Find any page! Continue next
+[Connect] csv_keyword = linguist, wiki_title = Computational Linguistics (journal), avg_score = 0.4146409332752228
+[Connect] csv_keyword = linguist, wiki_title = Linguist List, avg_score = 0.4029645025730133
+[Connect] csv_keyword = linguist, wiki_title = Corpus Linguistics and Linguistic Theory, avg_score = 0.6702251434326172
+[Connect] csv_keyword = linguist, wiki_title = Linguistic typology, avg_score = 0.5484321713447571
+[Connect] csv_keyword = linguist, wiki_title = Journal of Linguistics, avg_score = 0.5271148085594177
+[Connect] csv_keyword = linguist, wiki_title = The Linguists, avg_score = 0.26237767934799194
+[Connect] csv_keyword = linguist, wiki_title = Notes on Linguistics, avg_score = 0.6722992062568665
+Cannot Find any page! Continue next
+[Connect] csv_keyword = index, wiki_title = Book Review Index, avg_score = 0.292535662651062
+[Connect] csv_keyword = index, wiki_title = Democracy Index, avg_score = 0.3141874670982361
+[Connect] csv_keyword = index, wiki_title = Biography Index, avg_score = 0.2868952751159668
+[Connect] csv_keyword = index, wiki_title = Colour Index International, avg_score = 0.2857038378715515
+[Connect] csv_keyword = document, wiki_title = Document, avg_score = 0.30036041140556335
+[Connect] csv_keyword = document, wiki_title = Identity document, avg_score = 0.4090593755245209
+[Connect] csv_keyword = document, wiki_title = PDF, avg_score = 0.34066760540008545
+[Connect] csv_keyword = document, wiki_title = Document Object Model, avg_score = 0.4506251811981201
+[Connect] csv_keyword = document, wiki_title = Electronic document, avg_score = 0.3622000217437744
+[Connect] csv_keyword = document, wiki_title = False document, avg_score = 0.4306929111480713
+[Connect] csv_keyword = document, wiki_title = Commission (document), avg_score = 0.2576832175254822
+[Connect] csv_keyword = document, wiki_title = Document management system, avg_score = 0.3256469964981079
+[Connect] csv_keyword = document, wiki_title = Document classification, avg_score = 0.4199959933757782
+[Connect] csv_keyword = document, wiki_title = Document processing, avg_score = 0.3655487596988678
+[Connect] csv_keyword = vocabulari, wiki_title = Provençal dialect, avg_score = 0.2745010554790497
+[Connect] csv_keyword = vocabulari, wiki_title = Sursilvan, avg_score = 0.2709260582923889
+Cannot Find any page! Continue next
+[Connect] csv_keyword = vocabulari, wiki_title = Dictionaries of the Polish language, avg_score = 0.3262348175048828
+Cannot Find any page! Continue next
+[Connect] csv_keyword = token, wiki_title = Sleep Token, avg_score = 0.3139342963695526
+[Connect] csv_keyword = token, wiki_title = Tokenism, avg_score = 0.41184917092323303
+[Connect] csv_keyword = token, wiki_title = JSON Web Token, avg_score = 0.40588533878326416
+Cannot Find any page! Continue next
+[Connect] csv_keyword = token, wiki_title = Lexical analysis, avg_score = 0.41323497891426086
+Cannot Find any page! Continue next
+[Connect] csv_keyword = token, wiki_title = Type–token distinction, avg_score = 0.3297172784805298
+Cannot Find any page! Continue next
+[Connect] csv_keyword = stem, wiki_title = Science, technology, engineering, and mathematics, avg_score = 0.4180278778076172
+[Connect] csv_keyword = stem, wiki_title = Stem cell, avg_score = 0.2813407778739929
+[Connect] csv_keyword = stem, wiki_title = Plant stem, avg_score = 0.26130279898643494
+Cannot Find any page! Continue next
+[Connect] csv_keyword = stem, wiki_title = Stem (music), avg_score = 0.5687351226806641
+[Connect] csv_keyword = stem, wiki_title = Stem-cell therapy, avg_score = 0.41767269372940063
+[Dictionaries and tolerant retrieval]
+Cannot Find any page! Continue next
+[Connect] csv_keyword = index, wiki_title = Book Review Index, avg_score = 0.292535662651062
+[Connect] csv_keyword = index, wiki_title = Democracy Index, avg_score = 0.3141874670982361
+[Connect] csv_keyword = index, wiki_title = Biography Index, avg_score = 0.2868952751159668
+[Connect] csv_keyword = index, wiki_title = Colour Index International, avg_score = 0.2857038378715515
+[Connect] csv_keyword = vocabulari, wiki_title = Provençal dialect, avg_score = 0.2745010554790497
+[Connect] csv_keyword = vocabulari, wiki_title = Sursilvan, avg_score = 0.2709260582923889
+Cannot Find any page! Continue next
+[Connect] csv_keyword = vocabulari, wiki_title = Dictionaries of the Polish language, avg_score = 0.3262348175048828
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = search, wiki_title = The Searchers, avg_score = 0.32712435722351074
+[Connect] csv_keyword = search, wiki_title = The Search, avg_score = 0.34625744819641113
+[Connect] csv_keyword = search, wiki_title = Search engine optimization, avg_score = 0.33732977509498596
+[Connect] csv_keyword = search, wiki_title = Semantic search, avg_score = 0.49174782633781433
+[Connect] csv_keyword = search, wiki_title = Microsoft Bing, avg_score = 0.40043213963508606
+Cannot Find any page! Continue next
+[Connect] csv_keyword = spell, wiki_title = Speak & Spell (album), avg_score = 0.48054224252700806
+[Connect] csv_keyword = spell, wiki_title = Spellling, avg_score = 0.40911102294921875
+[Connect] csv_keyword = spell, wiki_title = Spell checker, avg_score = 0.40454721450805664
+Cannot Find any page! Continue next
+[Connect] csv_keyword = spell, wiki_title = Speak & Spell (album), avg_score = 0.48054224252700806
+[Connect] csv_keyword = spell, wiki_title = Knurr and spell, avg_score = 0.4243079125881195
+[Connect] csv_keyword = queri, wiki_title = Luna Sharpshooters, avg_score = 0.28995025157928467
+[Connect] csv_keyword = queri, wiki_title = Quirites, avg_score = 0.3153051435947418
+[Connect] csv_keyword = queri, wiki_title = Philippine Revolutionary Army, avg_score = 0.28786197304725647
+[Connect] csv_keyword = queri, wiki_title = Latin conjugation, avg_score = 0.2935495972633362
+[Connect] csv_keyword = queri, wiki_title = Toʼabaita language, avg_score = 0.3369905948638916
+[Connect] csv_keyword = queri, wiki_title = Antonio Luna, avg_score = 0.41307520866394043
+[Connect] csv_keyword = queri, wiki_title = List of rulers of Auvergne, avg_score = 0.25385716557502747
+[Connect] csv_keyword = queri, wiki_title = Voss, avg_score = 0.25320833921432495
+Cannot Find any page! Continue next
+[Connect] csv_keyword = vowel, wiki_title = Front vowel, avg_score = 0.7154817581176758
+[Connect] csv_keyword = vowel, wiki_title = Close vowel, avg_score = 0.4939453601837158
+[Connect] csv_keyword = vowel, wiki_title = Mid central vowel, avg_score = 0.647559404373169
+[Connect] csv_keyword = vowel, wiki_title = Vowel length, avg_score = 0.3521038591861725
+[Connect] csv_keyword = vowel, wiki_title = Mid vowel, avg_score = 0.7344263792037964
+[Connect] csv_keyword = vowel, wiki_title = Great Vowel Shift, avg_score = 0.6629342436790466
+[Connect] csv_keyword = vowel, wiki_title = Back vowel, avg_score = 0.6049261093139648
+[Connect] csv_keyword = vowel, wiki_title = Central vowel, avg_score = 0.7995894551277161
+[Connect] csv_keyword = vowel, wiki_title = IPA vowel chart with audio, avg_score = 0.5947520732879639
+[Connect] csv_keyword = dictionari, wiki_title = Sindhi to English dictionaries, avg_score = 0.3645436763763428
+[Connect] csv_keyword = dictionari, wiki_title = List of English words of Arabic origin, avg_score = 0.2962055206298828
+[Index construction]
+Cannot Find any page! Continue next
+[Connect] csv_keyword = index, wiki_title = Book Review Index, avg_score = 0.292535662651062
+[Connect] csv_keyword = index, wiki_title = Democracy Index, avg_score = 0.3141874670982361
+[Connect] csv_keyword = index, wiki_title = Biography Index, avg_score = 0.2868952751159668
+[Connect] csv_keyword = index, wiki_title = Colour Index International, avg_score = 0.2857038378715515
+[Connect] csv_keyword = collect, wiki_title = Collectable, avg_score = 0.40147221088409424
+Cannot Find any page! Continue next
+[Connect] csv_keyword = collect, wiki_title = Collect Pond, avg_score = 0.26681724190711975
+[Connect] csv_keyword = collect, wiki_title = Collect call, avg_score = 0.4333471953868866
+[Connect] csv_keyword = collect, wiki_title = Patch collecting, avg_score = 0.2919516861438751
+[Connect] csv_keyword = collect, wiki_title = Collecting, avg_score = 0.516708493232727
+[Connect] csv_keyword = collect, wiki_title = Coin collecting, avg_score = 0.2909538447856903
+[Connect] csv_keyword = collect, wiki_title = Mineral collecting, avg_score = 0.2805618345737457
+[Connect] csv_keyword = collect, wiki_title = Psychology of collecting, avg_score = 0.38843685388565063
+[Connect] csv_keyword = collect, wiki_title = Click & Collect, avg_score = 0.35932278633117676
+[Connect] csv_keyword = crawl, wiki_title = Common Crawl, avg_score = 0.4161069691181183
+[Connect] csv_keyword = crawl, wiki_title = Front crawl, avg_score = 0.41437116265296936
+[Connect] csv_keyword = crawl, wiki_title = Crawl (2011 film), avg_score = 0.44499167799949646
+[Connect] csv_keyword = crawl, wiki_title = Crawl space, avg_score = 0.529591977596283
+[Connect] csv_keyword = crawl, wiki_title = Pub crawl, avg_score = 0.25992968678474426
+[Connect] csv_keyword = crawl, wiki_title = Star Wars opening crawl, avg_score = 0.3447827994823456
+[Connect] csv_keyword = crawl, wiki_title = Web crawler, avg_score = 0.4396248459815979
+[Connect] csv_keyword = crawl, wiki_title = Dungeon crawl, avg_score = 0.3430269658565521
+[Connect] csv_keyword = crawl, wiki_title = Learning to Crawl, avg_score = 0.3468113839626312
+Cannot Find any page! Continue next
+[Connect] csv_keyword = hardwar, wiki_title = Hardwar (video game), avg_score = 0.43765613436698914
+[Connect] csv_keyword = hardwar, wiki_title = Haridwar district, avg_score = 0.25135403871536255
+Cannot Find any page! Continue next
+[Connect] csv_keyword = hardwar, wiki_title = Hardwar Gap, avg_score = 0.3208087086677551
+[Connect] csv_keyword = hardwar, wiki_title = Hardwar Goswami, avg_score = 0.3821995258331299
+[Connect] csv_keyword = hardwar, wiki_title = Hardwar Dubey, avg_score = 0.3342350423336029
+[Index compression]
+Cannot Find any page! Continue next
+[Connect] csv_keyword = memori, wiki_title = Kioxia, avg_score = 0.3250986933708191
+[Connect] csv_keyword = memori, wiki_title = List of Latin phrases, avg_score = 0.3553926348686218
+Cannot Find any page! Continue next
+[Connect] csv_keyword = memori, wiki_title = Naruto: Shippuden (season 14), avg_score = 0.2720835208892822
+Cannot Find any page! Continue next
+[Connect] csv_keyword = cach, wiki_title = Chữ Hán, avg_score = 0.26365792751312256
+[Connect] csv_keyword = cach, wiki_title = Banbáin Os Cach, avg_score = 0.34467077255249023
+[Connect] csv_keyword = compress, wiki_title = Compressed air, avg_score = 0.377591609954834
+[Connect] csv_keyword = compress, wiki_title = Compressed hydrogen, avg_score = 0.43262961506843567
+[Connect] csv_keyword = compress, wiki_title = Warm compress, avg_score = 0.49085530638694763
+[Connect] csv_keyword = compress, wiki_title = Compressed fluid, avg_score = 0.3952876329421997
+[Connect] csv_keyword = compress, wiki_title = Compressive strength, avg_score = 0.29427534341812134
+Cannot Find any page! Continue next
+[Connect] csv_keyword = compress, wiki_title = Compressed file library, avg_score = 0.3055464029312134
+Cannot Find any page! Continue next
+[Connect] csv_keyword = decompress, wiki_title = Uncontrolled decompression, avg_score = 0.38205742835998535
+[Connect] csv_keyword = decompress, wiki_title = Decompression practice, avg_score = 0.4380902349948883
+[Connect] csv_keyword = decompress, wiki_title = Decompression equipment, avg_score = 0.4316956102848053
+[Connect] csv_keyword = decompress, wiki_title = Decompression sickness, avg_score = 0.36220717430114746
+[Connect] csv_keyword = decompress, wiki_title = Ratio decompression, avg_score = 0.39837074279785156
+[Connect] csv_keyword = decompress, wiki_title = Decompression illness, avg_score = 0.371740460395813
+[Connect] csv_keyword = decompress, wiki_title = Decompression (diving), avg_score = 0.40082448720932007
+[Connect] csv_keyword = decompress, wiki_title = Spinal decompression, avg_score = 0.4131056070327759
+[Scoring, term weighting and the vector space model]
+Cannot Find any page! Continue next
+[Connect] csv_keyword = index, wiki_title = Book Review Index, avg_score = 0.292535662651062
+[Connect] csv_keyword = index, wiki_title = Democracy Index, avg_score = 0.3141874670982361
+[Connect] csv_keyword = index, wiki_title = Biography Index, avg_score = 0.2868952751159668
+[Connect] csv_keyword = index, wiki_title = Colour Index International, avg_score = 0.2857038378715515
+[Connect] csv_keyword = document, wiki_title = Document, avg_score = 0.30036041140556335
+[Connect] csv_keyword = document, wiki_title = Identity document, avg_score = 0.4090593755245209
+[Connect] csv_keyword = document, wiki_title = PDF, avg_score = 0.34066760540008545
+[Connect] csv_keyword = document, wiki_title = Document Object Model, avg_score = 0.4506251811981201
+[Connect] csv_keyword = document, wiki_title = Electronic document, avg_score = 0.3622000217437744
+[Connect] csv_keyword = document, wiki_title = False document, avg_score = 0.4306929111480713
+[Connect] csv_keyword = document, wiki_title = Commission (document), avg_score = 0.2576832175254822
+[Connect] csv_keyword = document, wiki_title = Document management system, avg_score = 0.3256469964981079
+[Connect] csv_keyword = document, wiki_title = Document classification, avg_score = 0.4199959933757782
+[Connect] csv_keyword = document, wiki_title = Document processing, avg_score = 0.3655487596988678
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = search, wiki_title = The Searchers, avg_score = 0.32712435722351074
+[Connect] csv_keyword = search, wiki_title = The Search, avg_score = 0.34625744819641113
+[Connect] csv_keyword = search, wiki_title = Search engine optimization, avg_score = 0.33732977509498596
+[Connect] csv_keyword = search, wiki_title = Semantic search, avg_score = 0.49174782633781433
+[Connect] csv_keyword = search, wiki_title = Microsoft Bing, avg_score = 0.40043213963508606
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = score, wiki_title = Film score, avg_score = 0.29720136523246765
+Cannot Find any page! Continue next
+[Connect] csv_keyword = score, wiki_title = Apgar score, avg_score = 0.26494139432907104
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = score, wiki_title = Credit score, avg_score = 0.3641689121723175
+[Connect] csv_keyword = score, wiki_title = Standard score, avg_score = 0.5057582855224609
+[Connect] csv_keyword = topic, wiki_title = Topic and comment, avg_score = 0.5482394695281982
+[Connect] csv_keyword = topic, wiki_title = Topic sentence, avg_score = 0.533635675907135
+[Connect] csv_keyword = topic, wiki_title = Off topic, avg_score = 0.34204795956611633
+[Connect] csv_keyword = topic, wiki_title = Topic model, avg_score = 0.43624240159988403
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = rank, wiki_title = Private (rank), avg_score = 0.32746249437332153
+[Connect] csv_keyword = rank, wiki_title = Commodore (rank), avg_score = 0.36036983132362366
+[Connect] csv_keyword = rank, wiki_title = Diplomatic rank, avg_score = 0.6571018695831299
+[Connect] csv_keyword = rank, wiki_title = Rankism, avg_score = 0.3183102309703827
+[Connect] csv_keyword = queri, wiki_title = Luna Sharpshooters, avg_score = 0.28995025157928467
+[Connect] csv_keyword = queri, wiki_title = Quirites, avg_score = 0.3153051435947418
+[Connect] csv_keyword = queri, wiki_title = Philippine Revolutionary Army, avg_score = 0.28786197304725647
+[Connect] csv_keyword = queri, wiki_title = Latin conjugation, avg_score = 0.2935495972633362
+[Connect] csv_keyword = queri, wiki_title = Toʼabaita language, avg_score = 0.3369905948638916
+[Connect] csv_keyword = queri, wiki_title = Antonio Luna, avg_score = 0.41307520866394043
+[Connect] csv_keyword = queri, wiki_title = List of rulers of Auvergne, avg_score = 0.25385716557502747
+[Connect] csv_keyword = queri, wiki_title = Voss, avg_score = 0.25320833921432495
+[Computing scores in a complete search system]
+Cannot Find any page! Continue next
+[Connect] csv_keyword = index, wiki_title = Book Review Index, avg_score = 0.292535662651062
+[Connect] csv_keyword = index, wiki_title = Democracy Index, avg_score = 0.3141874670982361
+[Connect] csv_keyword = index, wiki_title = Biography Index, avg_score = 0.2868952751159668
+[Connect] csv_keyword = index, wiki_title = Colour Index International, avg_score = 0.2857038378715515
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = search, wiki_title = The Searchers, avg_score = 0.32712435722351074
+[Connect] csv_keyword = search, wiki_title = The Search, avg_score = 0.34625744819641113
+[Connect] csv_keyword = search, wiki_title = Search engine optimization, avg_score = 0.33732977509498596
+[Connect] csv_keyword = search, wiki_title = Semantic search, avg_score = 0.49174782633781433
+[Connect] csv_keyword = search, wiki_title = Microsoft Bing, avg_score = 0.40043213963508606
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = score, wiki_title = Film score, avg_score = 0.29720136523246765
+Cannot Find any page! Continue next
+[Connect] csv_keyword = score, wiki_title = Apgar score, avg_score = 0.26494139432907104
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = score, wiki_title = Credit score, avg_score = 0.3641689121723175
+[Connect] csv_keyword = score, wiki_title = Standard score, avg_score = 0.5057582855224609
+[Connect] csv_keyword = heurist, wiki_title = Heuristic, avg_score = 0.266289085149765
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = rank, wiki_title = Private (rank), avg_score = 0.32746249437332153
+[Connect] csv_keyword = rank, wiki_title = Commodore (rank), avg_score = 0.36036983132362366
+[Connect] csv_keyword = rank, wiki_title = Diplomatic rank, avg_score = 0.6571018695831299
+[Connect] csv_keyword = rank, wiki_title = Rankism, avg_score = 0.3183102309703827
+[Connect] csv_keyword = queri, wiki_title = Luna Sharpshooters, avg_score = 0.28995025157928467
+[Connect] csv_keyword = queri, wiki_title = Quirites, avg_score = 0.3153051435947418
+[Connect] csv_keyword = queri, wiki_title = Philippine Revolutionary Army, avg_score = 0.28786197304725647
+[Connect] csv_keyword = queri, wiki_title = Latin conjugation, avg_score = 0.2935495972633362
+[Connect] csv_keyword = queri, wiki_title = Toʼabaita language, avg_score = 0.3369905948638916
+[Connect] csv_keyword = queri, wiki_title = Antonio Luna, avg_score = 0.41307520866394043
+[Connect] csv_keyword = queri, wiki_title = List of rulers of Auvergne, avg_score = 0.25385716557502747
+[Connect] csv_keyword = queri, wiki_title = Voss, avg_score = 0.25320833921432495
+[Evaluation in information retrieval]
+Cannot Find any page! Continue next
+[Connect] csv_keyword = index, wiki_title = Book Review Index, avg_score = 0.292535662651062
+[Connect] csv_keyword = index, wiki_title = Democracy Index, avg_score = 0.3141874670982361
+[Connect] csv_keyword = index, wiki_title = Biography Index, avg_score = 0.2868952751159668
+[Connect] csv_keyword = index, wiki_title = Colour Index International, avg_score = 0.2857038378715515
+[Connect] csv_keyword = document, wiki_title = Document, avg_score = 0.30036041140556335
+[Connect] csv_keyword = document, wiki_title = Identity document, avg_score = 0.4090593755245209
+[Connect] csv_keyword = document, wiki_title = PDF, avg_score = 0.34066760540008545
+[Connect] csv_keyword = document, wiki_title = Document Object Model, avg_score = 0.4506251811981201
+[Connect] csv_keyword = document, wiki_title = Electronic document, avg_score = 0.3622000217437744
+[Connect] csv_keyword = document, wiki_title = False document, avg_score = 0.4306929111480713
+[Connect] csv_keyword = document, wiki_title = Commission (document), avg_score = 0.2576832175254822
+[Connect] csv_keyword = document, wiki_title = Document management system, avg_score = 0.3256469964981079
+[Connect] csv_keyword = document, wiki_title = Document classification, avg_score = 0.4199959933757782
+[Connect] csv_keyword = document, wiki_title = Document processing, avg_score = 0.3655487596988678
+Cannot Find any page! Continue next
+[Connect] csv_keyword = effect, wiki_title = The Effect, avg_score = 0.3590082824230194
+[Connect] csv_keyword = effect, wiki_title = Dunning–Kruger effect, avg_score = 0.2680380046367645
+Cannot Find any page! Continue next
+[Connect] csv_keyword = effect, wiki_title = Domino effect, avg_score = 0.37539204955101013
+[Connect] csv_keyword = effect, wiki_title = Bezold effect, avg_score = 0.2734423279762268
+[Connect] csv_keyword = effect, wiki_title = Purkinje effect, avg_score = 0.35073477029800415
+[Connect] csv_keyword = effect, wiki_title = Health effect, avg_score = 0.3731785714626312
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = rank, wiki_title = Private (rank), avg_score = 0.32746249437332153
+[Connect] csv_keyword = rank, wiki_title = Commodore (rank), avg_score = 0.36036983132362366
+[Connect] csv_keyword = rank, wiki_title = Diplomatic rank, avg_score = 0.6571018695831299
+[Connect] csv_keyword = rank, wiki_title = Rankism, avg_score = 0.3183102309703827
+Cannot Find any page! Continue next
+[Connect] csv_keyword = evalu, wiki_title = Educational software, avg_score = 0.255361407995224
+[Relevance feedback and query expansion]
+[Connect] csv_keyword = vocabulari, wiki_title = Provençal dialect, avg_score = 0.2745010554790497
+[Connect] csv_keyword = vocabulari, wiki_title = Sursilvan, avg_score = 0.2709260582923889
+Cannot Find any page! Continue next
+[Connect] csv_keyword = vocabulari, wiki_title = Dictionaries of the Polish language, avg_score = 0.3262348175048828
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = search, wiki_title = The Searchers, avg_score = 0.32712435722351074
+[Connect] csv_keyword = search, wiki_title = The Search, avg_score = 0.34625744819641113
+[Connect] csv_keyword = search, wiki_title = Search engine optimization, avg_score = 0.33732977509498596
+[Connect] csv_keyword = search, wiki_title = Semantic search, avg_score = 0.49174782633781433
+[Connect] csv_keyword = search, wiki_title = Microsoft Bing, avg_score = 0.40043213963508606
+[Connect] csv_keyword = refin, wiki_title = Refin–Mobilvetta, avg_score = 0.4993452727794647
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = wordnet, wiki_title = Google Translate, avg_score = 0.3038768470287323
+[Connect] csv_keyword = wordnet, wiki_title = EuroWordNet, avg_score = 0.5367692112922668
+[Connect] csv_keyword = wordnet, wiki_title = ImageNet, avg_score = 0.3451288640499115
+[Connect] csv_keyword = term, wiki_title = Team, avg_score = 0.26548832654953003
+[Connect] csv_keyword = term, wiki_title = 86 (term), avg_score = 0.2625259459018707
+[Connect] csv_keyword = term, wiki_title = Cricket, avg_score = 0.26002100110054016
+[Connect] csv_keyword = term, wiki_title = Term limit, avg_score = 0.28951218724250793
+[Connect] csv_keyword = term, wiki_title = Term paper, avg_score = 0.4587766230106354
+Cannot Find any page! Continue next
+[Connect] csv_keyword = term, wiki_title = Michaelmas term, avg_score = 0.2587999105453491
+[Connect] csv_keyword = queri, wiki_title = Luna Sharpshooters, avg_score = 0.28995025157928467
+[Connect] csv_keyword = queri, wiki_title = Quirites, avg_score = 0.3153051435947418
+[Connect] csv_keyword = queri, wiki_title = Philippine Revolutionary Army, avg_score = 0.28786197304725647
+[Connect] csv_keyword = queri, wiki_title = Latin conjugation, avg_score = 0.2935495972633362
+[Connect] csv_keyword = queri, wiki_title = Toʼabaita language, avg_score = 0.3369905948638916
+[Connect] csv_keyword = queri, wiki_title = Antonio Luna, avg_score = 0.41307520866394043
+[Connect] csv_keyword = queri, wiki_title = List of rulers of Auvergne, avg_score = 0.25385716557502747
+[Connect] csv_keyword = queri, wiki_title = Voss, avg_score = 0.25320833921432495
+Cannot Find any page! Continue next
+[XML retrieval]
+[Connect] csv_keyword = document, wiki_title = Document, avg_score = 0.30036041140556335
+[Connect] csv_keyword = document, wiki_title = Identity document, avg_score = 0.4090593755245209
+[Connect] csv_keyword = document, wiki_title = PDF, avg_score = 0.34066760540008545
+[Connect] csv_keyword = document, wiki_title = Document Object Model, avg_score = 0.4506251811981201
+[Connect] csv_keyword = document, wiki_title = Electronic document, avg_score = 0.3622000217437744
+[Connect] csv_keyword = document, wiki_title = False document, avg_score = 0.4306929111480713
+[Connect] csv_keyword = document, wiki_title = Commission (document), avg_score = 0.2576832175254822
+[Connect] csv_keyword = document, wiki_title = Document management system, avg_score = 0.3256469964981079
+[Connect] csv_keyword = document, wiki_title = Document classification, avg_score = 0.4199959933757782
+[Connect] csv_keyword = document, wiki_title = Document processing, avg_score = 0.3655487596988678
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = search, wiki_title = The Searchers, avg_score = 0.32712435722351074
+[Connect] csv_keyword = search, wiki_title = The Search, avg_score = 0.34625744819641113
+[Connect] csv_keyword = search, wiki_title = Search engine optimization, avg_score = 0.33732977509498596
+[Connect] csv_keyword = search, wiki_title = Semantic search, avg_score = 0.49174782633781433
+[Connect] csv_keyword = search, wiki_title = Microsoft Bing, avg_score = 0.40043213963508606
+[Connect] csv_keyword = xml, wiki_title = XML, avg_score = 0.4314073920249939
+[Connect] csv_keyword = xml, wiki_title = Ajax (programming), avg_score = 0.48696812987327576
+[Connect] csv_keyword = xml, wiki_title = XML Schema (W3C), avg_score = 0.5255129933357239
+[Connect] csv_keyword = xml, wiki_title = XML-RPC, avg_score = 0.6264113783836365
+[Connect] csv_keyword = xml, wiki_title = Office Open XML, avg_score = 0.33659592270851135
+Cannot Find any page! Continue next
+[Connect] csv_keyword = xml, wiki_title = XML schema, avg_score = 0.7435445785522461
+[Connect] csv_keyword = xml, wiki_title = XML Script, avg_score = 0.46402400732040405
+Cannot Find any page! Continue next
+[Connect] csv_keyword = sql, wiki_title = Microsoft SQL Server, avg_score = 0.5673625469207764
+Cannot Find any page! Continue next
+[Connect] csv_keyword = sql, wiki_title = SQL injection, avg_score = 0.39248672127723694
+[Connect] csv_keyword = sql, wiki_title = NoSQL, avg_score = 0.394770085811615
+[Connect] csv_keyword = sql, wiki_title = History of Microsoft SQL Server, avg_score = 0.5222923159599304
+[Connect] csv_keyword = sql, wiki_title = PostgreSQL, avg_score = 0.47003069519996643
+[Connect] csv_keyword = sql, wiki_title = PL/SQL, avg_score = 0.5782619714736938
+[Connect] csv_keyword = sql, wiki_title = Microsoft SQL Server, avg_score = 0.5673625469207764
+[Connect] csv_keyword = sql, wiki_title = Embedded SQL, avg_score = 0.5733420252799988
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = queri, wiki_title = Luna Sharpshooters, avg_score = 0.28995025157928467
+[Connect] csv_keyword = queri, wiki_title = Quirites, avg_score = 0.3153051435947418
+[Connect] csv_keyword = queri, wiki_title = Philippine Revolutionary Army, avg_score = 0.28786197304725647
+[Connect] csv_keyword = queri, wiki_title = Latin conjugation, avg_score = 0.2935495972633362
+[Connect] csv_keyword = queri, wiki_title = Toʼabaita language, avg_score = 0.3369905948638916
+[Connect] csv_keyword = queri, wiki_title = Antonio Luna, avg_score = 0.41307520866394043
+[Connect] csv_keyword = queri, wiki_title = List of rulers of Auvergne, avg_score = 0.25385716557502747
+[Connect] csv_keyword = queri, wiki_title = Voss, avg_score = 0.25320833921432495
+[Probabilistic information retrieval]
+[Connect] csv_keyword = document, wiki_title = Document, avg_score = 0.30036041140556335
+[Connect] csv_keyword = document, wiki_title = Identity document, avg_score = 0.4090593755245209
+[Connect] csv_keyword = document, wiki_title = PDF, avg_score = 0.34066760540008545
+[Connect] csv_keyword = document, wiki_title = Document Object Model, avg_score = 0.4506251811981201
+[Connect] csv_keyword = document, wiki_title = Electronic document, avg_score = 0.3622000217437744
+[Connect] csv_keyword = document, wiki_title = False document, avg_score = 0.4306929111480713
+[Connect] csv_keyword = document, wiki_title = Commission (document), avg_score = 0.2576832175254822
+[Connect] csv_keyword = document, wiki_title = Document management system, avg_score = 0.3256469964981079
+[Connect] csv_keyword = document, wiki_title = Document classification, avg_score = 0.4199959933757782
+[Connect] csv_keyword = document, wiki_title = Document processing, avg_score = 0.3655487596988678
+[Connect] csv_keyword = classifi, wiki_title = Amputee sports classification, avg_score = 0.27651870250701904
+Cannot Find any page! Continue next
+[Connect] csv_keyword = content, wiki_title = Free content, avg_score = 0.47570672631263733
+[Connect] csv_keyword = content, wiki_title = Downloadable content, avg_score = 0.3938390016555786
+[Connect] csv_keyword = content, wiki_title = Web content, avg_score = 0.41637128591537476
+[Connect] csv_keyword = content, wiki_title = Content (media), avg_score = 0.5460882782936096
+[Connect] csv_keyword = content, wiki_title = Streaming media, avg_score = 0.5101261734962463
+[Connect] csv_keyword = content, wiki_title = Content word, avg_score = 0.433653324842453
+[Connect] csv_keyword = content, wiki_title = Content analysis, avg_score = 0.43909457325935364
+[Connect] csv_keyword = content, wiki_title = Content format, avg_score = 0.3877492845058441
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = inform, wiki_title = InformNapalm, avg_score = 0.3497062921524048
+[Connect] csv_keyword = inform, wiki_title = Information content, avg_score = 0.41675567626953125
+[Connect] csv_keyword = inform, wiki_title = Inform version history, avg_score = 0.6193450689315796
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = probabilist, wiki_title = List of mathematical probabilists, avg_score = 0.6634992361068726
+[Connect] csv_keyword = probabilist, wiki_title = Catholic probabilism, avg_score = 0.5069643259048462
+[Connect] csv_keyword = probabilist, wiki_title = Bayesian probability, avg_score = 0.4241069555282593
+[Connect] csv_keyword = probabilist, wiki_title = Coherence (philosophical gambling strategy), avg_score = 0.3512985408306122
+[Connect] csv_keyword = probabilist, wiki_title = Bruno de Finetti, avg_score = 0.35691753029823303
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = rank, wiki_title = Private (rank), avg_score = 0.32746249437332153
+[Connect] csv_keyword = rank, wiki_title = Commodore (rank), avg_score = 0.36036983132362366
+[Connect] csv_keyword = rank, wiki_title = Diplomatic rank, avg_score = 0.6571018695831299
+[Connect] csv_keyword = rank, wiki_title = Rankism, avg_score = 0.3183102309703827
+[Language models for information retrieval]
+[Connect] csv_keyword = document, wiki_title = Document, avg_score = 0.30036041140556335
+[Connect] csv_keyword = document, wiki_title = Identity document, avg_score = 0.4090593755245209
+[Connect] csv_keyword = document, wiki_title = PDF, avg_score = 0.34066760540008545
+[Connect] csv_keyword = document, wiki_title = Document Object Model, avg_score = 0.4506251811981201
+[Connect] csv_keyword = document, wiki_title = Electronic document, avg_score = 0.3622000217437744
+[Connect] csv_keyword = document, wiki_title = False document, avg_score = 0.4306929111480713
+[Connect] csv_keyword = document, wiki_title = Commission (document), avg_score = 0.2576832175254822
+[Connect] csv_keyword = document, wiki_title = Document management system, avg_score = 0.3256469964981079
+[Connect] csv_keyword = document, wiki_title = Document classification, avg_score = 0.4199959933757782
+[Connect] csv_keyword = document, wiki_title = Document processing, avg_score = 0.3655487596988678
+[Connect] csv_keyword = queri, wiki_title = Luna Sharpshooters, avg_score = 0.28995025157928467
+[Connect] csv_keyword = queri, wiki_title = Quirites, avg_score = 0.3153051435947418
+[Connect] csv_keyword = queri, wiki_title = Philippine Revolutionary Army, avg_score = 0.28786197304725647
+[Connect] csv_keyword = queri, wiki_title = Latin conjugation, avg_score = 0.2935495972633362
+[Connect] csv_keyword = queri, wiki_title = Toʼabaita language, avg_score = 0.3369905948638916
+[Connect] csv_keyword = queri, wiki_title = Antonio Luna, avg_score = 0.41307520866394043
+[Connect] csv_keyword = queri, wiki_title = List of rulers of Auvergne, avg_score = 0.25385716557502747
+[Connect] csv_keyword = queri, wiki_title = Voss, avg_score = 0.25320833921432495
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = probabilist, wiki_title = List of mathematical probabilists, avg_score = 0.6634992361068726
+[Connect] csv_keyword = probabilist, wiki_title = Catholic probabilism, avg_score = 0.5069643259048462
+[Connect] csv_keyword = probabilist, wiki_title = Bayesian probability, avg_score = 0.4241069555282593
+[Connect] csv_keyword = probabilist, wiki_title = Coherence (philosophical gambling strategy), avg_score = 0.3512985408306122
+[Connect] csv_keyword = probabilist, wiki_title = Bruno de Finetti, avg_score = 0.35691753029823303
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = rank, wiki_title = Private (rank), avg_score = 0.32746249437332153
+[Connect] csv_keyword = rank, wiki_title = Commodore (rank), avg_score = 0.36036983132362366
+[Connect] csv_keyword = rank, wiki_title = Diplomatic rank, avg_score = 0.6571018695831299
+[Connect] csv_keyword = rank, wiki_title = Rankism, avg_score = 0.3183102309703827
+Cannot Find any page! Continue next
+[Connect] csv_keyword = model, wiki_title = Model (person), avg_score = 0.410574346780777
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = model, wiki_title = Domain model, avg_score = 0.4286431074142456
+[Connect] csv_keyword = model, wiki_title = Continuous modelling, avg_score = 0.5759984850883484
+[Connect] csv_keyword = model, wiki_title = Waterfall model, avg_score = 0.30824998021125793
+[Connect] csv_keyword = languag, wiki_title = Shakespeare Programming Language, avg_score = 0.35622861981391907
+[Connect] csv_keyword = languag, wiki_title = Linguistic discrimination, avg_score = 0.2600528299808502
+[Connect] csv_keyword = languag, wiki_title = English-medium education, avg_score = 0.371642529964447
+[Connect] csv_keyword = languag, wiki_title = Olga Kapeliuk, avg_score = 0.28215014934539795
+[Text classification and Naive Bayes]
+Cannot Find any page! Continue next
+[Connect] csv_keyword = index, wiki_title = Book Review Index, avg_score = 0.292535662651062
+[Connect] csv_keyword = index, wiki_title = Democracy Index, avg_score = 0.3141874670982361
+[Connect] csv_keyword = index, wiki_title = Biography Index, avg_score = 0.2868952751159668
+[Connect] csv_keyword = index, wiki_title = Colour Index International, avg_score = 0.2857038378715515
+Cannot Find any page! Continue next
+[Connect] csv_keyword = increment, wiki_title = Increment and decrement operators, avg_score = 0.6489608287811279
+[Connect] csv_keyword = increment, wiki_title = Incremental profit, avg_score = 0.30468693375587463
+[Connect] csv_keyword = increment, wiki_title = Incremental reading, avg_score = 0.3674831688404083
+[Connect] csv_keyword = increment, wiki_title = Incremental encoder, avg_score = 0.4050604999065399
+[Connect] csv_keyword = increment, wiki_title = Incremental compiler, avg_score = 0.3168686330318451
+[Connect] csv_keyword = increment, wiki_title = Iterative and incremental development, avg_score = 0.27856531739234924
+[Connect] csv_keyword = increment, wiki_title = Independent increments, avg_score = 0.3477928340435028
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = search, wiki_title = The Searchers, avg_score = 0.32712435722351074
+[Connect] csv_keyword = search, wiki_title = The Search, avg_score = 0.34625744819641113
+[Connect] csv_keyword = search, wiki_title = Search engine optimization, avg_score = 0.33732977509498596
+[Connect] csv_keyword = search, wiki_title = Semantic search, avg_score = 0.49174782633781433
+[Connect] csv_keyword = search, wiki_title = Microsoft Bing, avg_score = 0.40043213963508606
+[Connect] csv_keyword = microprocessor, wiki_title = Microprocessor, avg_score = 0.7702028155326843
+[Connect] csv_keyword = microprocessor, wiki_title = Microprocessor Report, avg_score = 0.43911412358283997
+[Connect] csv_keyword = microprocessor, wiki_title = MOS Technology 6502, avg_score = 0.40563473105430603
+[Connect] csv_keyword = microprocessor, wiki_title = Intel 4004, avg_score = 0.34350913763046265
+[Connect] csv_keyword = microprocessor, wiki_title = 32-bit computing, avg_score = 0.582531213760376
+[Connect] csv_keyword = microprocessor, wiki_title = AMULET (processor), avg_score = 0.2900727689266205
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = stem, wiki_title = Science, technology, engineering, and mathematics, avg_score = 0.4180278778076172
+[Connect] csv_keyword = stem, wiki_title = Stem cell, avg_score = 0.2813407778739929
+[Connect] csv_keyword = stem, wiki_title = Plant stem, avg_score = 0.26130279898643494
+Cannot Find any page! Continue next
+[Connect] csv_keyword = stem, wiki_title = Stem (music), avg_score = 0.5687351226806641
+[Connect] csv_keyword = stem, wiki_title = Stem-cell therapy, avg_score = 0.41767269372940063
+[Connect] csv_keyword = queri, wiki_title = Luna Sharpshooters, avg_score = 0.28995025157928467
+[Connect] csv_keyword = queri, wiki_title = Quirites, avg_score = 0.3153051435947418
+[Connect] csv_keyword = queri, wiki_title = Philippine Revolutionary Army, avg_score = 0.28786197304725647
+[Connect] csv_keyword = queri, wiki_title = Latin conjugation, avg_score = 0.2935495972633362
+[Connect] csv_keyword = queri, wiki_title = Toʼabaita language, avg_score = 0.3369905948638916
+[Connect] csv_keyword = queri, wiki_title = Antonio Luna, avg_score = 0.41307520866394043
+[Connect] csv_keyword = queri, wiki_title = List of rulers of Auvergne, avg_score = 0.25385716557502747
+[Connect] csv_keyword = queri, wiki_title = Voss, avg_score = 0.25320833921432495
+[Connect] csv_keyword = classif, wiki_title = International Paralympic Committee, avg_score = 0.2664201259613037
+[Vector space classification]
+[Connect] csv_keyword = document, wiki_title = Document, avg_score = 0.30036041140556335
+[Connect] csv_keyword = document, wiki_title = Identity document, avg_score = 0.4090593755245209
+[Connect] csv_keyword = document, wiki_title = PDF, avg_score = 0.34066760540008545
+[Connect] csv_keyword = document, wiki_title = Document Object Model, avg_score = 0.4506251811981201
+[Connect] csv_keyword = document, wiki_title = Electronic document, avg_score = 0.3622000217437744
+[Connect] csv_keyword = document, wiki_title = False document, avg_score = 0.4306929111480713
+[Connect] csv_keyword = document, wiki_title = Commission (document), avg_score = 0.2576832175254822
+[Connect] csv_keyword = document, wiki_title = Document management system, avg_score = 0.3256469964981079
+[Connect] csv_keyword = document, wiki_title = Document classification, avg_score = 0.4199959933757782
+[Connect] csv_keyword = document, wiki_title = Document processing, avg_score = 0.3655487596988678
+[Connect] csv_keyword = pattern, wiki_title = Pattern, avg_score = 0.6033948063850403
+[Connect] csv_keyword = pattern, wiki_title = Anti-pattern, avg_score = 0.4193388819694519
+Cannot Find any page! Continue next
+[Connect] csv_keyword = pattern, wiki_title = Singleton pattern, avg_score = 0.3655274212360382
+[Connect] csv_keyword = pattern, wiki_title = Facade pattern, avg_score = 0.2762838304042816
+[Connect] csv_keyword = pattern, wiki_title = Builder pattern, avg_score = 0.42685461044311523
+[Connect] csv_keyword = pattern, wiki_title = Behavioral pattern, avg_score = 0.32721439003944397
+[Connect] csv_keyword = pattern, wiki_title = Observer pattern, avg_score = 0.2945331335067749
+[Connect] csv_keyword = related, wiki_title = The Related Companies, avg_score = 0.34221121668815613
+[Connect] csv_keyword = related, wiki_title = Related rights, avg_score = 0.33907294273376465
+[Connect] csv_keyword = related, wiki_title = Gang Related – The Soundtrack, avg_score = 0.27966997027397156
+[Connect] csv_keyword = classifi, wiki_title = Amputee sports classification, avg_score = 0.27651870250701904
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = class, wiki_title = Social class, avg_score = 0.4192981719970703
+Cannot Find any page! Continue next
+[Connect] csv_keyword = class, wiki_title = Working class, avg_score = 0.2985623776912689
+[Connect] csv_keyword = class, wiki_title = Class (computer programming), avg_score = 0.30170294642448425
+[Connect] csv_keyword = class, wiki_title = Character class, avg_score = 0.386584609746933
+[Connect] csv_keyword = class, wiki_title = First-class cricket, avg_score = 0.31435254216194153
+Cannot Find any page! Continue next
+[Connect] csv_keyword = classif, wiki_title = International Paralympic Committee, avg_score = 0.2664201259613037
+[Support vector machines and machine learning on documents]
+[Connect] csv_keyword = featur, wiki_title = Gimme Some Lovin', avg_score = 0.25468748807907104
+[Connect] csv_keyword = featur, wiki_title = Creeping elegance, avg_score = 0.36485928297042847
+[Connect] csv_keyword = featur, wiki_title = Sinhalese New Year, avg_score = 0.2539403736591339
+[Connect] csv_keyword = classifi, wiki_title = Amputee sports classification, avg_score = 0.27651870250701904
+[Connect] csv_keyword = svm, wiki_title = Support vector machine, avg_score = 0.4624326229095459
+Cannot Find any page! Continue next
+[Connect] csv_keyword = svm, wiki_title = Ranking SVM, avg_score = 0.6042574048042297
+[Connect] csv_keyword = svm, wiki_title = SVM (company), avg_score = 0.3667834997177124
+[Connect] csv_keyword = svm, wiki_title = LIBSVM, avg_score = 0.5694951415061951
+[Connect] csv_keyword = svm, wiki_title = Support vector machine, avg_score = 0.4624326229095459
+[Connect] csv_keyword = machinelearn, wiki_title = ML.NET, avg_score = 0.37107789516448975
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = class, wiki_title = Social class, avg_score = 0.4192981719970703
+Cannot Find any page! Continue next
+[Connect] csv_keyword = class, wiki_title = Working class, avg_score = 0.2985623776912689
+[Connect] csv_keyword = class, wiki_title = Class (computer programming), avg_score = 0.30170294642448425
+[Connect] csv_keyword = class, wiki_title = Character class, avg_score = 0.386584609746933
+[Connect] csv_keyword = class, wiki_title = First-class cricket, avg_score = 0.31435254216194153
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = rank, wiki_title = Private (rank), avg_score = 0.32746249437332153
+[Connect] csv_keyword = rank, wiki_title = Commodore (rank), avg_score = 0.36036983132362366
+[Connect] csv_keyword = rank, wiki_title = Diplomatic rank, avg_score = 0.6571018695831299
+[Connect] csv_keyword = rank, wiki_title = Rankism, avg_score = 0.3183102309703827
+[Connect] csv_keyword = classif, wiki_title = International Paralympic Committee, avg_score = 0.2664201259613037
+[Flat clustering]
+[Connect] csv_keyword = hierarch, wiki_title = Ordinary (church officer), avg_score = 0.3464573323726654
+[Connect] csv_keyword = hierarch, wiki_title = Philaret (Voznesensky), avg_score = 0.39015012979507446
+[Connect] csv_keyword = hierarch, wiki_title = Hierarchy, avg_score = 0.3969733715057373
+[Connect] csv_keyword = hierarch, wiki_title = Alexandru Mesian, avg_score = 0.26310092210769653
+[Connect] csv_keyword = document, wiki_title = Document, avg_score = 0.30036041140556335
+[Connect] csv_keyword = document, wiki_title = Identity document, avg_score = 0.4090593755245209
+[Connect] csv_keyword = document, wiki_title = PDF, avg_score = 0.34066760540008545
+[Connect] csv_keyword = document, wiki_title = Document Object Model, avg_score = 0.4506251811981201
+[Connect] csv_keyword = document, wiki_title = Electronic document, avg_score = 0.3622000217437744
+[Connect] csv_keyword = document, wiki_title = False document, avg_score = 0.4306929111480713
+[Connect] csv_keyword = document, wiki_title = Commission (document), avg_score = 0.2576832175254822
+[Connect] csv_keyword = document, wiki_title = Document management system, avg_score = 0.3256469964981079
+[Connect] csv_keyword = document, wiki_title = Document classification, avg_score = 0.4199959933757782
+[Connect] csv_keyword = document, wiki_title = Document processing, avg_score = 0.3655487596988678
+[Connect] csv_keyword = supervis, wiki_title = SuperVia, avg_score = 0.3217461407184601
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = cluster, wiki_title = Cluster munition, avg_score = 0.40415647625923157
+[Connect] csv_keyword = cluster, wiki_title = Cluster analysis, avg_score = 0.5170106291770935
+[Connect] csv_keyword = cluster, wiki_title = Computer cluster, avg_score = 0.44989147782325745
+[Connect] csv_keyword = cluster, wiki_title = Galaxy cluster, avg_score = 0.3827996551990509
+[Connect] csv_keyword = cluster, wiki_title = Cluster headache, avg_score = 0.2970708906650543
+[Connect] csv_keyword = cluster, wiki_title = Business cluster, avg_score = 0.3877052962779999
+[Connect] csv_keyword = classif, wiki_title = International Paralympic Committee, avg_score = 0.2664201259613037
+[Hierarchical clustering]
+[Connect] csv_keyword = hierarch, wiki_title = Ordinary (church officer), avg_score = 0.3464573323726654
+[Connect] csv_keyword = hierarch, wiki_title = Philaret (Voznesensky), avg_score = 0.39015012979507446
+[Connect] csv_keyword = hierarch, wiki_title = Hierarchy, avg_score = 0.3969733715057373
+[Connect] csv_keyword = hierarch, wiki_title = Alexandru Mesian, avg_score = 0.26310092210769653
+[Connect] csv_keyword = algorithm, wiki_title = Algorithm, avg_score = 0.4779823422431946
+[Connect] csv_keyword = algorithm, wiki_title = Dijkstra's algorithm, avg_score = 0.37992122769355774
+Cannot Find any page! Continue next
+[Connect] csv_keyword = algorithm, wiki_title = Sorting algorithm, avg_score = 0.4603019654750824
+[Connect] csv_keyword = algorithm, wiki_title = Karatsuba algorithm, avg_score = 0.48343625664711
+[Connect] csv_keyword = algorithm, wiki_title = Algorithm, avg_score = 0.4779823422431946
+[Connect] csv_keyword = algorithm, wiki_title = Euclidean algorithm, avg_score = 0.33324649930000305
+[Connect] csv_keyword = algorithm, wiki_title = Viterbi algorithm, avg_score = 0.444916307926178
+[Connect] csv_keyword = algorithm, wiki_title = Kruskal's algorithm, avg_score = 0.3278464674949646
+[Connect] csv_keyword = algorithm, wiki_title = Genetic algorithm, avg_score = 0.3031535744667053
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = cluster, wiki_title = Cluster munition, avg_score = 0.40415647625923157
+[Connect] csv_keyword = cluster, wiki_title = Cluster analysis, avg_score = 0.5170106291770935
+[Connect] csv_keyword = cluster, wiki_title = Computer cluster, avg_score = 0.44989147782325745
+[Connect] csv_keyword = cluster, wiki_title = Galaxy cluster, avg_score = 0.3827996551990509
+[Connect] csv_keyword = cluster, wiki_title = Cluster headache, avg_score = 0.2970708906650543
+[Connect] csv_keyword = cluster, wiki_title = Business cluster, avg_score = 0.3877052962779999
+[Matrix decompositions and latent semantic indexing]
+Cannot Find any page! Continue next
+[Connect] csv_keyword = index, wiki_title = Book Review Index, avg_score = 0.292535662651062
+[Connect] csv_keyword = index, wiki_title = Democracy Index, avg_score = 0.3141874670982361
+[Connect] csv_keyword = index, wiki_title = Biography Index, avg_score = 0.2868952751159668
+[Connect] csv_keyword = index, wiki_title = Colour Index International, avg_score = 0.2857038378715515
+[Connect] csv_keyword = document, wiki_title = Document, avg_score = 0.30036041140556335
+[Connect] csv_keyword = document, wiki_title = Identity document, avg_score = 0.4090593755245209
+[Connect] csv_keyword = document, wiki_title = PDF, avg_score = 0.34066760540008545
+[Connect] csv_keyword = document, wiki_title = Document Object Model, avg_score = 0.4506251811981201
+[Connect] csv_keyword = document, wiki_title = Electronic document, avg_score = 0.3622000217437744
+[Connect] csv_keyword = document, wiki_title = False document, avg_score = 0.4306929111480713
+[Connect] csv_keyword = document, wiki_title = Commission (document), avg_score = 0.2576832175254822
+[Connect] csv_keyword = document, wiki_title = Document management system, avg_score = 0.3256469964981079
+[Connect] csv_keyword = document, wiki_title = Document classification, avg_score = 0.4199959933757782
+[Connect] csv_keyword = document, wiki_title = Document processing, avg_score = 0.3655487596988678
+[Connect] csv_keyword = matrix, wiki_title = The Matrix, avg_score = 0.32676053047180176
+[Connect] csv_keyword = matrix, wiki_title = The Matrix, avg_score = 0.32676053047180176
+[Connect] csv_keyword = matrix, wiki_title = The Matrix Resurrections, avg_score = 0.37073349952697754
+[Connect] csv_keyword = matrix, wiki_title = The Matrix (franchise), avg_score = 0.32448938488960266
+[Connect] csv_keyword = matrix, wiki_title = The Matrix Revolutions, avg_score = 0.5141226053237915
+[Connect] csv_keyword = matrix, wiki_title = Matrix (mathematics), avg_score = 0.6668496131896973
+[Connect] csv_keyword = matrix, wiki_title = Matrix multiplication, avg_score = 0.7441920042037964
+[Connect] csv_keyword = matrix, wiki_title = Transpose, avg_score = 0.6591883897781372
+[Connect] csv_keyword = matrix, wiki_title = Invertible matrix, avg_score = 0.7514081597328186
+[Connect] csv_keyword = matrix, wiki_title = Definite matrix, avg_score = 0.34926679730415344
+[Connect] csv_keyword = semant, wiki_title = Paul de Sémant, avg_score = 0.32803699374198914
+[Connect] csv_keyword = semant, wiki_title = Semantics, avg_score = 0.32527846097946167
+Cannot Find any page! Continue next
+[Connect] csv_keyword = matric, wiki_title = Matriculation, avg_score = 0.3925970494747162
+Cannot Find any page! Continue next
+[Connect] csv_keyword = matric, wiki_title = Matric Pass, avg_score = 0.2711668312549591
+[Connect] csv_keyword = matric, wiki_title = SBOA Matriculation and Higher Secondary School, Chennai, avg_score = 0.36592239141464233
+[Connect] csv_keyword = matric, wiki_title = Matriculation in South Africa, avg_score = 0.41762956976890564
+[Connect] csv_keyword = matric, wiki_title = PMG Matric. Higher Sec. School, Othakkalmandapam, avg_score = 0.3783775568008423
+[Connect] csv_keyword = matric, wiki_title = Matricity, avg_score = 0.3270353674888611
+[Connect] csv_keyword = matric, wiki_title = Design structure matrix, avg_score = 0.2501220107078552
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = rank, wiki_title = Private (rank), avg_score = 0.32746249437332153
+[Connect] csv_keyword = rank, wiki_title = Commodore (rank), avg_score = 0.36036983132362366
+[Connect] csv_keyword = rank, wiki_title = Diplomatic rank, avg_score = 0.6571018695831299
+[Connect] csv_keyword = rank, wiki_title = Rankism, avg_score = 0.3183102309703827
+[Web search basics]
+Cannot Find any page! Continue next
+[Connect] csv_keyword = index, wiki_title = Book Review Index, avg_score = 0.292535662651062
+[Connect] csv_keyword = index, wiki_title = Democracy Index, avg_score = 0.3141874670982361
+[Connect] csv_keyword = index, wiki_title = Biography Index, avg_score = 0.2868952751159668
+[Connect] csv_keyword = index, wiki_title = Colour Index International, avg_score = 0.2857038378715515
+[Connect] csv_keyword = document, wiki_title = Document, avg_score = 0.30036041140556335
+[Connect] csv_keyword = document, wiki_title = Identity document, avg_score = 0.4090593755245209
+[Connect] csv_keyword = document, wiki_title = PDF, avg_score = 0.34066760540008545
+[Connect] csv_keyword = document, wiki_title = Document Object Model, avg_score = 0.4506251811981201
+[Connect] csv_keyword = document, wiki_title = Electronic document, avg_score = 0.3622000217437744
+[Connect] csv_keyword = document, wiki_title = False document, avg_score = 0.4306929111480713
+[Connect] csv_keyword = document, wiki_title = Commission (document), avg_score = 0.2576832175254822
+[Connect] csv_keyword = document, wiki_title = Document management system, avg_score = 0.3256469964981079
+[Connect] csv_keyword = document, wiki_title = Document classification, avg_score = 0.4199959933757782
+[Connect] csv_keyword = document, wiki_title = Document processing, avg_score = 0.3655487596988678
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = search, wiki_title = The Searchers, avg_score = 0.32712435722351074
+[Connect] csv_keyword = search, wiki_title = The Search, avg_score = 0.34625744819641113
+[Connect] csv_keyword = search, wiki_title = Search engine optimization, avg_score = 0.33732977509498596
+[Connect] csv_keyword = search, wiki_title = Semantic search, avg_score = 0.49174782633781433
+[Connect] csv_keyword = search, wiki_title = Microsoft Bing, avg_score = 0.40043213963508606
+[Connect] csv_keyword = collect, wiki_title = Collectable, avg_score = 0.40147221088409424
+Cannot Find any page! Continue next
+[Connect] csv_keyword = collect, wiki_title = Collect Pond, avg_score = 0.26681724190711975
+[Connect] csv_keyword = collect, wiki_title = Collect call, avg_score = 0.4333471953868866
+[Connect] csv_keyword = collect, wiki_title = Patch collecting, avg_score = 0.2919516861438751
+[Connect] csv_keyword = collect, wiki_title = Collecting, avg_score = 0.516708493232727
+[Connect] csv_keyword = collect, wiki_title = Coin collecting, avg_score = 0.2909538447856903
+[Connect] csv_keyword = collect, wiki_title = Mineral collecting, avg_score = 0.2805618345737457
+[Connect] csv_keyword = collect, wiki_title = Psychology of collecting, avg_score = 0.38843685388565063
+[Connect] csv_keyword = collect, wiki_title = Click & Collect, avg_score = 0.35932278633117676
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = inform, wiki_title = InformNapalm, avg_score = 0.3497062921524048
+[Connect] csv_keyword = inform, wiki_title = Information content, avg_score = 0.41675567626953125
+[Connect] csv_keyword = inform, wiki_title = Inform version history, avg_score = 0.6193450689315796
+Cannot Find any page! Continue next
+[Connect] csv_keyword = web, wiki_title = Web (programming system), avg_score = 0.3427799940109253
+Cannot Find any page! Continue next
+[Connect] csv_keyword = web, wiki_title = World Wide Web, avg_score = 0.5743939280509949
+[Connect] csv_keyword = web, wiki_title = Web application, avg_score = 0.6958725452423096
+[Connect] csv_keyword = web, wiki_title = Web browser, avg_score = 0.5585890412330627
+[Connect] csv_keyword = web, wiki_title = Website, avg_score = 0.6772724986076355
+[Connect] csv_keyword = web, wiki_title = Web hosting service, avg_score = 0.4711860120296478
+[Connect] csv_keyword = web, wiki_title = Web series, avg_score = 0.4573693871498108
+[Connect] csv_keyword = web, wiki_title = Web scraping, avg_score = 0.37213706970214844
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = basic, wiki_title = BASIC, avg_score = 0.49277785420417786
+Cannot Find any page! Continue next
+[Connect] csv_keyword = basic, wiki_title = Visual Basic (classic), avg_score = 0.2939871549606323
+[Connect] csv_keyword = basic, wiki_title = Basic access authentication, avg_score = 0.38357171416282654
+Cannot Find any page! Continue next
+[Connect] csv_keyword = basic, wiki_title = Universal basic income, avg_score = 0.31030869483947754
+[Connect] csv_keyword = basic, wiki_title = Microsoft BASIC, avg_score = 0.3283938467502594
+[Web crawling and indexes]
+Cannot Find any page! Continue next
+[Connect] csv_keyword = index, wiki_title = Book Review Index, avg_score = 0.292535662651062
+[Connect] csv_keyword = index, wiki_title = Democracy Index, avg_score = 0.3141874670982361
+[Connect] csv_keyword = index, wiki_title = Biography Index, avg_score = 0.2868952751159668
+[Connect] csv_keyword = index, wiki_title = Colour Index International, avg_score = 0.2857038378715515
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = server, wiki_title = Server (computing), avg_score = 0.5342478156089783
+[Connect] csv_keyword = server, wiki_title = Apple Network Server, avg_score = 0.45015013217926025
+Cannot Find any page! Continue next
+[Connect] csv_keyword = server, wiki_title = Microsoft Exchange Server, avg_score = 0.43981704115867615
+[Connect] csv_keyword = server, wiki_title = Client–server model, avg_score = 0.41864514350891113
+[Connect] csv_keyword = server, wiki_title = Web server, avg_score = 0.3497568666934967
+[Connect] csv_keyword = server, wiki_title = Open Platform Communications, avg_score = 0.25664857029914856
+Cannot Find any page! Continue next
+[Connect] csv_keyword = overview, wiki_title = Overview effect, avg_score = 0.3673674464225769
+[Connect] csv_keyword = overview, wiki_title = Interaction overview diagram, avg_score = 0.3754667341709137
+[Connect] csv_keyword = overview, wiki_title = 2022 in film, avg_score = 0.2622317969799042
+Cannot Find any page! Continue next
+[Connect] csv_keyword = overview, wiki_title = Chronology of the liberation of Dutch cities and towns during World War II, avg_score = 0.2618423104286194
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = content, wiki_title = Free content, avg_score = 0.47570672631263733
+[Connect] csv_keyword = content, wiki_title = Downloadable content, avg_score = 0.3938390016555786
+[Connect] csv_keyword = content, wiki_title = Web content, avg_score = 0.41637128591537476
+[Connect] csv_keyword = content, wiki_title = Content (media), avg_score = 0.5460882782936096
+[Connect] csv_keyword = content, wiki_title = Streaming media, avg_score = 0.5101261734962463
+[Connect] csv_keyword = content, wiki_title = Content word, avg_score = 0.433653324842453
+[Connect] csv_keyword = content, wiki_title = Content analysis, avg_score = 0.43909457325935364
+[Connect] csv_keyword = content, wiki_title = Content format, avg_score = 0.3877492845058441
+Cannot Find any page! Continue next
+[Connect] csv_keyword = dn, wiki_title = DNA, avg_score = 0.281963974237442
+[Connect] csv_keyword = dn, wiki_title = DN-1, avg_score = 0.5174555778503418
+[Connect] csv_keyword = dn, wiki_title = International DN, avg_score = 0.34562039375305176
+[Connect] csv_keyword = dn, wiki_title = DN-V Bufalo, avg_score = 0.31892192363739014
+[Connect] csv_keyword = dn, wiki_title = Dagens Nyheter, avg_score = 0.34462255239486694
+[Connect] csv_keyword = dn, wiki_title = Deductive-nomological model, avg_score = 0.3317505419254303
+Cannot Find any page! Continue next
+[Connect] csv_keyword = dn, wiki_title = DN73A, avg_score = 0.421024888753891
+[Connect] csv_keyword = crawl, wiki_title = Common Crawl, avg_score = 0.4161069691181183
+[Connect] csv_keyword = crawl, wiki_title = Front crawl, avg_score = 0.41437116265296936
+[Connect] csv_keyword = crawl, wiki_title = Crawl (2011 film), avg_score = 0.44499167799949646
+[Connect] csv_keyword = crawl, wiki_title = Crawl space, avg_score = 0.529591977596283
+[Connect] csv_keyword = crawl, wiki_title = Pub crawl, avg_score = 0.25992968678474426
+[Connect] csv_keyword = crawl, wiki_title = Star Wars opening crawl, avg_score = 0.3447827994823456
+[Connect] csv_keyword = crawl, wiki_title = Web crawler, avg_score = 0.4396248459815979
+[Connect] csv_keyword = crawl, wiki_title = Dungeon crawl, avg_score = 0.3430269658565521
+[Connect] csv_keyword = crawl, wiki_title = Learning to Crawl, avg_score = 0.3468113839626312
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = page, wiki_title = Larry Page, avg_score = 0.26656222343444824
+Cannot Find any page! Continue next
+[Connect] csv_keyword = page, wiki_title = Pager, avg_score = 0.3171059787273407
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = web, wiki_title = Web (programming system), avg_score = 0.3427799940109253
+Cannot Find any page! Continue next
+[Connect] csv_keyword = web, wiki_title = World Wide Web, avg_score = 0.5743939280509949
+[Connect] csv_keyword = web, wiki_title = Web application, avg_score = 0.6958725452423096
+[Connect] csv_keyword = web, wiki_title = Web browser, avg_score = 0.5585890412330627
+[Connect] csv_keyword = web, wiki_title = Website, avg_score = 0.6772724986076355
+[Connect] csv_keyword = web, wiki_title = Web hosting service, avg_score = 0.4711860120296478
+[Connect] csv_keyword = web, wiki_title = Web series, avg_score = 0.4573693871498108
+[Connect] csv_keyword = web, wiki_title = Web scraping, avg_score = 0.37213706970214844
+[Connect] csv_keyword = crawler, wiki_title = Web crawler, avg_score = 0.49301838874816895
+Cannot Find any page! Continue next
+[Connect] csv_keyword = crawler, wiki_title = Crawler-transporter, avg_score = 0.6552610993385315
+[Connect] csv_keyword = crawler, wiki_title = Web crawler, avg_score = 0.49301838874816895
+[Connect] csv_keyword = crawler, wiki_title = Crawler (album), avg_score = 0.5276909470558167
+[Connect] csv_keyword = crawler, wiki_title = XGC88000 crawler crane, avg_score = 0.3508329391479492
+Cannot Find any page! Continue next
+[Connect] csv_keyword = crawler, wiki_title = Kerb crawler, avg_score = 0.5518413782119751
+[Connect] csv_keyword = crawler, wiki_title = Dungeon crawl, avg_score = 0.3113720118999481
+[Connect] csv_keyword = crawler, wiki_title = Bottom crawler, avg_score = 0.5701416730880737
+[Link analysis]
+Cannot Find any page! Continue next
+[Connect] csv_keyword = refer, wiki_title = HTTP referer, avg_score = 0.3285216987133026
+[Connect] csv_keyword = refer, wiki_title = Referral chain, avg_score = 0.27987146377563477
+[Connect] csv_keyword = refer, wiki_title = Referer spoofing, avg_score = 0.29528293013572693
+[Connect] csv_keyword = refer, wiki_title = Multiple referral, avg_score = 0.2955248951911926
+Cannot Find any page! Continue next
+[Connect] csv_keyword = refer, wiki_title = Referred itch, avg_score = 0.3982572853565216
+[Connect] csv_keyword = refer, wiki_title = Referral (medicine), avg_score = 0.2643219232559204
+[Connect] csv_keyword = refer, wiki_title = Referral marketing, avg_score = 0.39119744300842285
+[Connect] csv_keyword = refer, wiki_title = Referring expression, avg_score = 0.38315504789352417
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = hyperlink, wiki_title = Hyperlink, avg_score = 0.4959622919559479
+[Connect] csv_keyword = hyperlink, wiki_title = Hyperlink cinema, avg_score = 0.3509257435798645
+[Connect] csv_keyword = hyperlink, wiki_title = Automatic hyperlinking, avg_score = 0.4740065038204193
+[Connect] csv_keyword = hyperlink, wiki_title = Object hyperlinking, avg_score = 0.3912907838821411
+Cannot Find any page! Continue next
+[Connect] csv_keyword = hyperlink, wiki_title = Anthology film, avg_score = 0.25890856981277466
+[Connect] csv_keyword = hyperlink, wiki_title = Hypertext, avg_score = 0.5536394715309143
+[Connect] csv_keyword = hyperlink, wiki_title = World Wide Web, avg_score = 0.37531551718711853
+[Connect] csv_keyword = hyperlink, wiki_title = Vattam, avg_score = 0.36694616079330444
+[Connect] csv_keyword = hyperlink, wiki_title = Canonical link element, avg_score = 0.3316381573677063
+Cannot Find any page! Continue next
+[Connect] csv_keyword = citat, wiki_title = Hyper-converged infrastructure, avg_score = 0.26005613803863525
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Connect] csv_keyword = rank, wiki_title = Private (rank), avg_score = 0.32746249437332153
+[Connect] csv_keyword = rank, wiki_title = Commodore (rank), avg_score = 0.36036983132362366
+[Connect] csv_keyword = rank, wiki_title = Diplomatic rank, avg_score = 0.6571018695831299
+[Connect] csv_keyword = rank, wiki_title = Rankism, avg_score = 0.3183102309703827
+Cannot Find any page! Continue next
+[Connect] csv_keyword = pagerank, wiki_title = Search engine optimization, avg_score = 0.4152209162712097
+[Connect] csv_keyword = pagerank, wiki_title = Nofollow, avg_score = 0.312322199344635
+[Connect] csv_keyword = pagerank, wiki_title = PageRank algorithm in biochemistry, avg_score = 0.45957422256469727
+[Connect] csv_keyword = pagerank, wiki_title = Google matrix, avg_score = 0.46951261162757874
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+Cannot Find any page! Continue next
+[Done] Making connection
+Namespace(df_path='../Stanford_NLP_df.csv')

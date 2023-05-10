@@ -56,8 +56,12 @@ def main(args):
 
     eval_results = {i : None for i in range(args.num_folds)}
 
-    train_loss = deepcopy(eval_results)
+    train_total_loss = deepcopy(eval_results)
+    train_bce_loss = deepcopy(eval_results)
+    train_c_axis0_loss = deepcopy(eval_results)
+    train_c_axis1_loss = deepcopy(eval_results)
     train_acc = deepcopy(eval_results)
+
     val_loss = deepcopy(eval_results)
     val_acc = deepcopy(eval_results)
 
@@ -66,16 +70,18 @@ def main(args):
 
     for idx, (train_index, val_index) in enumerate(kfold.split(edge_ids_train, edge_labels_train)):
         
+        train_flow = train_gen.flow(edge_ids_train[train_index], edge_labels_train[train_index], shuffle = True)
+        val_flow = train_gen.flow(edge_ids_train[val_index], edge_labels_train[val_index], shuffle = False)
+
         # model
-        model = load_model(train_gen, args)  #print out: model.summary()        
+        model = load_contrasive_model(train_gen, train_flow, args)  #print out: model.summary()        
+
 
         # check
         if idx == 0:
             print("Untrained model's Test Evaluation:")
-            test(model, test_flow, args)
+            Contrastive_test(model, test_flow, args)
 
-        train_flow = train_gen.flow(edge_ids_train[train_index], edge_labels_train[train_index], shuffle = True)
-        val_flow = train_gen.flow(edge_ids_train[val_index], edge_labels_train[val_index], shuffle = False)
         
         # train
         history = model.fit(
@@ -88,11 +94,16 @@ def main(args):
                             workers = args.num_workers,
                         )
         result_one_fold = history.history
+       
 
-        train_loss[idx] = make_round(result_one_fold['loss'], 4)
-        train_acc[idx] = make_round(result_one_fold['binary_accuracy'], 4)
-        val_loss[idx] = make_round(result_one_fold['val_loss'], 4)
-        val_acc[idx] = make_round(result_one_fold['val_binary_accuracy'], 4)
+        train_total_loss[idx] = make_round(result_one_fold['Total_loss'], 4)
+        train_bce_loss[idx] = make_round(result_one_fold['BCE_loss'], 4)
+        train_c_axis0_loss[idx] = make_round(result_one_fold['Contrastive_loss(axis0)'], 4)
+        train_c_axis1_loss[idx] = make_round(result_one_fold['Contrastive_loss(axis1)'], 4)
+        train_acc[idx] = make_round(result_one_fold['Train_acc'], 4)
+
+        val_loss[idx] = make_round(result_one_fold['val_Loss'], 4)
+        val_acc[idx] = make_round(result_one_fold['val_Acc'], 4)
 
         # average of all epochs
         if np.mean(val_acc[idx]) > best_acc:
@@ -101,22 +112,26 @@ def main(args):
             print(f"[Best model Changed] Best_acc = {best_acc}")
 
     # Report
-    train_mean_loss = cal_mean(train_loss)
+    train_mean_loss = cal_mean(train_total_loss)
+    train_mean_bce_loss = cal_mean(train_bce_loss)
+    train_mean_c_axis0_loss = cal_mean(train_c_axis0_loss)
+    train_mean_c_axis1_loss = cal_mean(train_c_axis1_loss)
     train_mean_acc = cal_mean(train_acc)
+
     val_mean_loss = cal_mean(val_loss)
     val_mean_acc = cal_mean(val_acc)
 
     total_result = dict()
-    for metric in ["train_mean_loss", "train_mean_acc", "val_mean_loss", "val_mean_acc", "train_loss", "train_acc", "val_loss", "val_acc"]:
+    for metric in ["train_mean_loss", "train_mean_bce_loss", "train_mean_c_axis0_loss","train_mean_c_axis1_loss", "train_mean_acc", "val_mean_loss", "val_mean_acc"]:
         total_result[metric] = eval(metric)
     
     #print(f"\ntotal_result = {total_result}\n")
 
     # test
     print("Trained model's Test Evaluation:")
-    test_result = test(best_model, test_flow, args)
-    t_acc = round(test_result["binary_accuracy"],4)
-    t_loss = round(test_result["loss"],4)
+    test_result = Contrastive_test(best_model, test_flow, args)
+    t_acc = round(test_result["Acc"],4)
+    t_loss = round(test_result["Loss"],4)
 
 
     # [save the all results] #
@@ -130,8 +145,11 @@ def main(args):
     best_model.save(f"{save_path}/weight")
 
     ## figure
-    save_figure(train_mean_loss, val_mean_loss, "Loss", save_path)
-    save_figure(train_mean_acc, val_mean_acc, "Acc", save_path)
+    loss_dict = {"Train_total_loss": train_mean_loss, "Train_BCE_loss": train_mean_bce_loss, "Train_Contrastive_loss(axis0)": train_mean_c_axis0_loss, "Train_Contrastive_loss(axis1)": train_mean_c_axis1_loss, "Val_loss": val_mean_loss}
+    save_figure_contrastive(loss_dict, "Loss", save_path)
+
+    acc_dict = {"Train": train_mean_acc, "Val": val_mean_acc}
+    save_figure_contrastive(acc_dict, "Acc", save_path)
 
     ## result
     with open(f"{save_path}/total_result.pickle", "wb") as f:
@@ -161,7 +179,7 @@ if __name__ == "__main__":
     
     parser.add_argument("--result_path",
                         type = str,
-                        default = "./Result_for_HinSage/Total",
+                        default = "./Result_for_HinSage_Contrastive/Total",
                         help = "path of data")
 
     parser.add_argument("--weight_toggle",
@@ -186,7 +204,7 @@ if __name__ == "__main__":
     
     parser.add_argument("--batch_size",
                         type = int,
-                        default = 200)
+                        default = 1000)
     
     parser.add_argument("--epochs",
                         type = int,
@@ -203,6 +221,25 @@ if __name__ == "__main__":
     parser.add_argument("--num_workers",
                         type = int,
                         default = -1)
+    
+    parser.add_argument("--temperature",
+                        type = float,
+                        default = 1.3)
+    
+    parser.add_argument("--label_smoothing",
+                        type = float,
+                        default = 0.1)
+    
+    parser.add_argument("--a0",
+                        type = float,
+                        default = 0.1,
+                        help = "weight for axis0 loss")
+    
+    parser.add_argument("--a1",
+                        type = float,
+                        default = 0.1,
+                        help = "weight for axis1 loss")
+
 
     args = parser.parse_args()
 

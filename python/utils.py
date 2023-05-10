@@ -17,6 +17,9 @@ from tensorflow.compat.v1 import ConfigProto
 from tensorflow.compat.v1 import InteractiveSession
 from sklearn.model_selection import KFold
 
+from Model.model import *
+
+
 def fix_gpu():
     config = ConfigProto()
     config.gpu_options.allow_growth = True
@@ -129,6 +132,39 @@ def load_model(train_gen ,args):
         )
     return model
 
+def load_contrasive_model(train_gen, train_flow, args):
+
+    hinsage = HinSAGE(
+                      layer_sizes = args.layer_sizes,
+                      generator = train_gen,
+                      bias = True,
+                      dropout = args.drop_out
+                      )
+    
+    assert len(args.layer_sizes) == len(args.num_samples) # check whether it matches the number between them.
+
+    # head
+    x_inp, x_out = hinsage.in_out_tensors()
+    
+    # extractor
+    train_flow = train_flow
+    model = Contrastive_Model(train_flow, 
+                              args.temperature, 
+                              args.a0, 
+                              args.a1,
+                              x_inp,
+                              x_out,
+                              args.label_smoothing)
+    
+    # etc
+    model.compile(
+        optimizer=optimizers.Adam(learning_rate = args.lr),
+        loss = losses.binary_crossentropy,
+        metrics = [metrics.binary_accuracy]
+        )
+    
+    return model
+
 def test(model, test_flow, args):
     test_metrics = model.evaluate(
                                     test_flow,
@@ -138,6 +174,22 @@ def test(model, test_flow, args):
                                 )
 
     result = dict(zip(model.metrics_names, test_metrics))
+
+    for name, val in result.items():
+        print("\t{}: {:0.4f}".format(name, val))
+    
+    return result
+
+
+def Contrastive_test(model, test_flow, args):
+    test_metrics = model.evaluate(
+                                    test_flow,
+                                    verbose = 1,
+                                    use_multiprocessing = True,
+                                    workers = args.num_workers
+                                )
+
+    result = dict(zip(["Acc","Loss"], test_metrics))
 
     for name, val in result.items():
         print("\t{}: {:0.4f}".format(name, val))
@@ -154,6 +206,19 @@ def save_figure(train_data, val_data, metric, result_path):
     data = {"train" : train_data,
             "val" : val_data}
     df = pd.DataFrame(data)
+
+    plt.xlabel('Epochs', fontsize = 13)
+    plt.ylabel(metric, fontsize = 13)
+
+    splot = sns.lineplot(data = df)
+    sfig = splot.get_figure()
+    sfig.savefig(f'{result_path}/{metric}.png')
+    
+    plt.close(sfig)
+
+def save_figure_contrastive(dictionary, metric, result_path):
+
+    df = pd.DataFrame(dictionary)
 
     plt.xlabel('Epochs', fontsize = 13)
     plt.ylabel(metric, fontsize = 13)

@@ -10,6 +10,11 @@ from transformers import T5Tokenizer, T5ForConditionalGeneration
 from torch.nn import DataParallel
 import torch
 import gc
+from keybert import KeyBERT
+
+model_name ='all-MiniLM-L6-v2' 
+model1 = SentenceTransformer(model_name)
+kw_model = KeyBERT(model=model1)
 
 
 def get_avg_scores(csv_keyword, wiki_keywords, model):
@@ -21,8 +26,15 @@ def get_avg_scores(csv_keyword, wiki_keywords, model):
     avg_score = util.pytorch_cos_sim(csv_emb, wiki_embs).mean().item()
     return avg_score
 
+def get_keywords(sample,kw_model):
 
-def get_keywords(sample, model, tokenizer, device):
+    keywords = kw_model.extract_keywords(sample, stop_words = 'english', use_maxsum = True, top_n = 15)
+
+    return [k[0] for k in keywords]
+
+
+
+def get_keywords_T5(sample, model, tokenizer, device):
     # preprocess
     task_prefix = "Keywords: "
     input_sequences = [task_prefix + sample]
@@ -80,8 +92,8 @@ def main(args):
 
 
     # keywords extraction model from wiki text
-    keyword_model = T5ForConditionalGeneration.from_pretrained("sentence-transformers/all-MiniLM-L6-v2").to(device)
-    keyword_tokenizer = T5Tokenizer.from_pretrained("sentence-transformers/all-MiniLM-L6-v2")
+    if False: keyword_model = T5ForConditionalGeneration.from_pretrained("sentence-transformers/all-MiniLM-L6-v2").to(device)
+    if False: keyword_tokenizer = T5Tokenizer.from_pretrained("sentence-transformers/all-MiniLM-L6-v2")
 
     # sentence model to get average score between csv_keyword and wiki_keywords
     sentence_model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2').to(device)
@@ -129,6 +141,7 @@ def main(args):
                     wiki_title = wiki_page.title
                     wiki_url = wiki_page.url
                     summary = wiki_page.summary
+                    page_content = wiki_page.content
                 except:
                     print("Cannot Find any page! Continue next")
                     continue
@@ -136,8 +149,8 @@ def main(args):
 
                 # wiki_keywords
                 if wiki_title not in wiki_metadata.keys():
-                    wiki_keywords = get_keywords(summary, keyword_model, keyword_tokenizer, device)
-                    wiki_keywords = wiki_keywords.split(",")
+                    wiki_keywords = get_keywords(page_content, kw_model)
+                    if False: wiki_keywords = wiki_keywords.split(",")
                 else:
                     wiki_keywords = wiki_metadata[wiki_title]["keywords"]
 

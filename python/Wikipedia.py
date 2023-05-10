@@ -80,8 +80,8 @@ def main(args):
 
 
     # keywords extraction model from wiki text
-    keyword_model = T5ForConditionalGeneration.from_pretrained("Voicelab/vlt5-base-keywords").to(device)
-    keyword_tokenizer = T5Tokenizer.from_pretrained("Voicelab/vlt5-base-keywords")
+    keyword_model = T5ForConditionalGeneration.from_pretrained("sentence-transformers/all-MiniLM-L6-v2").to(device)
+    keyword_tokenizer = T5Tokenizer.from_pretrained("sentence-transformers/all-MiniLM-L6-v2")
 
     # sentence model to get average score between csv_keyword and wiki_keywords
     sentence_model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2').to(device)
@@ -175,7 +175,7 @@ def main(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("--df_path", type = str, default = "../Stanford_NLP_df.csv", help = "the path of csv2keywords")
+    parser.add_argument("--df_path", type = str, default = "./Dataset/Arun/test.csv", help = "the path of csv2keywords")
 
     args = parser.parse_args()
 

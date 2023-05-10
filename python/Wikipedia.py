@@ -11,11 +11,7 @@ from torch.nn import DataParallel
 import torch
 import gc
 from keybert import KeyBERT
-
-model_name ='all-MiniLM-L6-v2' 
-model1 = SentenceTransformer(model_name)
-kw_model = KeyBERT(model=model1)
-
+from tqdm import tqdm
 
 def get_avg_scores(csv_keyword, wiki_keywords, model):
     get_gpu()
@@ -95,6 +91,11 @@ def main(args):
     if False: keyword_model = T5ForConditionalGeneration.from_pretrained("sentence-transformers/all-MiniLM-L6-v2").to(device)
     if False: keyword_tokenizer = T5Tokenizer.from_pretrained("sentence-transformers/all-MiniLM-L6-v2")
 
+    model_name ='all-MiniLM-L6-v2' 
+    model1 = SentenceTransformer(model_name)
+    kw_model = KeyBERT(model=model1)
+
+
     # sentence model to get average score between csv_keyword and wiki_keywords
     sentence_model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2').to(device)
 
@@ -117,7 +118,7 @@ def main(args):
 
     keyword_pairs = {}
     # iteration for csv files
-    for csv in ck_df.itertuples():
+    for csv in tqdm(ck_df.itertuples()):
         
         # cleaning
         clean_keyword = cleaning(csv.keywords, ps, lm)
@@ -155,33 +156,34 @@ def main(args):
                     wiki_keywords = wiki_metadata[wiki_title]["keywords"]
 
                 # get_avg scores
-                try:
-                    avg_score = keyword_pairs[(csv_keyword, tuple(wiki_keywords))]
-                except:
-                    avg_score = get_avg_scores(csv_keyword, wiki_keywords, sentence_model)
-                    keyword_pairs[(csv_keyword, tuple(wiki_keywords))] = avg_score
+                if not(len(wiki_keywords) == 0):
+                    try:
+                        avg_score = keyword_pairs[(csv_keyword, tuple(wiki_keywords))]
+                    except:
+                        avg_score = get_avg_scores(csv_keyword, wiki_keywords, sentence_model)
+                        keyword_pairs[(csv_keyword, tuple(wiki_keywords))] = avg_score
 
-                # save
-                if avg_score > avg_score_th:
-                    
-                    # get id
-                    wiki_id = get_id(wiki_title, wiki_mapping_id)
-                    csv_id = get_id(csv_file_name, csv_mapping_id)
+                    # save
+                    if avg_score > avg_score_th:
+                        
+                        # get id
+                        wiki_id = get_id(wiki_title, wiki_mapping_id)
+                        csv_id = get_id(csv_file_name, csv_mapping_id)
 
-                    # create connection
-                    create_connection(wiki2csv, wiki_id, csv_id)
-                    create_connection(csv2wiki, csv_id, wiki_id)
+                        # create connection
+                        create_connection(wiki2csv, wiki_id, csv_id)
+                        create_connection(csv2wiki, csv_id, wiki_id)
 
-                    # save wiki_metadata
-                    save_wiki_metadata(wiki_metadata, wiki_title, wiki_keywords, wiki_url)
+                        # save wiki_metadata
+                        save_wiki_metadata(wiki_metadata, wiki_title, wiki_keywords, wiki_url)
 
-                    print(f"[Connect] csv_keyword = {csv_keyword}, wiki_title = {wiki_title}, avg_score = {avg_score}")
+                        print(f"[Connect] csv_keyword = {csv_keyword}, wiki_title = {wiki_title}, avg_score = {avg_score}")
 
         # save the all files as pickle
 
         names = ["wiki_metadata","csv_metadata","wiki_mapping_id","csv_mapping_id","csv2wiki","wiki2csv"]
         for name in names:
-            with open(f'./Dataset/{name}.pickle','wb') as f:
+            with open(f'./Dataset/Arun/{name}.pickle','wb') as f:
                 pickle.dump(eval(name), f, pickle.HIGHEST_PROTOCOL)
 
 

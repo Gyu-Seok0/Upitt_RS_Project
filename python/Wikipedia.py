@@ -194,7 +194,7 @@ def main(args):
                         # save wiki_metadata
                         save_wiki_metadata(wiki_metadata, wiki_title, wiki_keywords, wiki_url)
 
-                        print(f"[Connect] csv_keyword = {csv_keyword}, wiki_title = {wiki_title}, avg_score = {avg_score}")
+                        print(f"[Connect] csv_keyword = {csv_keyword}, wiki_title = {wiki_title}, avg_score = {round(avg_score,2)}")
 
         # save the all files as pickle
 

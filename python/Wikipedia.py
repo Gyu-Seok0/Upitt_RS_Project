@@ -1,10 +1,12 @@
 import argparse
 import pandas as pd
 import ast
-import wikipedia as wiki
+from mediawikiapi import MediaWikiAPI
+mediawiki = MediaWikiAPI()
+
 import pickle
 from nltk.stem import PorterStemmer, LancasterStemmer,WordNetLemmatizer
-
+import numpy as np
 from sentence_transformers import SentenceTransformer, util
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 from torch.nn import DataParallel
@@ -12,9 +14,25 @@ import torch
 import gc
 from keybert import KeyBERT
 from tqdm import tqdm
+import scann
+from math import sqrt
+
+
+def generate_embeddings(data_ls, model):
+    embeddings = model.encode(data_ls)
+    return embeddings
+     
 
 def get_sim_scores(csv_keyword, wiki_keywords, model):
-    return util.pytorch_cos_sim(model.encode(csv_keyword), model.encode(wiki_keywords)).item()
+    csv_emb_df =  pd.DataFrame(generate_embeddings([csv_keyword],model))
+    wiki_embs_df = pd.DataFrame(generate_embeddings([wiki_keywords],model))
+    k = int(sqrt(len(wiki_keywords)))
+    searcher = scann.scann_ops_pybind.builder(wiki_embs_df, 10, "dot_product").tree(num_leaves=k, num_leaves_to_search=int(k/20), training_sample_size=2500).score_brute_force(2).reorder(7).build()
+
+    matched_wiki_keyword_indices, wiki_sim_scores = searcher.search(csv_emb_df.loc[0])
+
+    return np.mean(wiki_sim_scores) if len(matched_wiki_keyword_indices) > 0 else 0.0
+
 
 
 def get_avg_scores(csv_keyword, wiki_keywords, model):
@@ -28,7 +46,7 @@ def get_avg_scores(csv_keyword, wiki_keywords, model):
 
 def get_keywords(sample,kw_model):
 
-    keywords = kw_model.extract_keywords(sample, stop_words = 'english', use_maxsum = True, nr_candidates = 10, top_n = 2)
+    keywords = kw_model.extract_keywords(sample, stop_words = 'english', use_maxsum = True, top_n = 15)
 
     return [k[0] for k in keywords]
 
@@ -81,8 +99,8 @@ def get_gpu():
 def main(args):
 
     # device
-    # device = 'cuda:1' if torch.cuda.is_available() else 'cpu'
-    device = "cpu"
+    device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
+    # device = "cpu"
     print(f"device = {device}")
 
 
@@ -95,13 +113,8 @@ def main(args):
     if False: keyword_model = T5ForConditionalGeneration.from_pretrained("sentence-transformers/all-MiniLM-L6-v2").to(device)
     if False: keyword_tokenizer = T5Tokenizer.from_pretrained("sentence-transformers/all-MiniLM-L6-v2")
 
-    model_name ='all-MiniLM-L6-v2' 
-    model1 = SentenceTransformer(model_name)
+    model1 = SentenceTransformer(args.model_name).to(device)
     kw_model = KeyBERT(model=model1)
-
-
-    # sentence model to get average score between csv_keyword and wiki_keywords
-    sentence_model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2').to(device)
 
     # threshold to avg_score
     avg_score_th = 0.25
@@ -136,13 +149,13 @@ def main(args):
         for csv_keyword in clean_keyword:
 
             # wiki based on searching for csv_keyword
-            wiki_list = wiki.search(csv_keyword)
+            wiki_list = mediawiki.search(csv_keyword)
 
             for wiki_candidate in wiki_list:
 
                 # find page
                 try:
-                    wiki_page = wiki.page(wiki_candidate)
+                    wiki_page = mediawiki.page(wiki_candidate)
                     wiki_title = wiki_page.title
                     wiki_url = wiki_page.url
                     summary = wiki_page.summary
@@ -164,7 +177,7 @@ def main(args):
                     try:
                         avg_score = keyword_pairs[(csv_keyword, tuple(wiki_keywords))]
                     except:
-                        avg_score = get_sim_scores(csv_keyword, wiki_keywords, sentence_model)
+                        avg_score = get_sim_scores(csv_keyword, wiki_keywords, model1)
                         keyword_pairs[(csv_keyword, tuple(wiki_keywords))] = avg_score
 
                     # save
@@ -178,10 +191,10 @@ def main(args):
                         create_connection(wiki2csv, wiki_id, csv_id)
                         create_connection(csv2wiki, csv_id, wiki_id)
 
-                        # save wiki_metadata
-                        save_wiki_metadata(wiki_metadata, wiki_title, wiki_keywords, wiki_url)
+                    # save wiki_metadata
+                    save_wiki_metadata(wiki_metadata, wiki_title, wiki_keywords, wiki_url)
 
-                        print(f"[Connect] csv_keyword = {csv_keyword}, wiki_title = {wiki_title}, avg_score = {avg_score}")
+                    print(f"[Connect] csv_keyword = {csv_keyword}, wiki_title = {wiki_title}, avg_score = {avg_score}")
 
         # save the all files as pickle
 
@@ -196,6 +209,8 @@ if __name__ == "__main__":
 
     parser.add_argument("--df_path", type = str, default = "./Dataset/Stanford_big/test.csv", help = "the path of csv2keywords")
     parser.add_argument("--out_path", type=str, default="./Dataset/Stanford_big/", help="output folder for pickle files")
+    parser.add_argument("--model_name",type=str,default="all-MiniLM-L6-v2")
+
     args = parser.parse_args()
 
     print(args)

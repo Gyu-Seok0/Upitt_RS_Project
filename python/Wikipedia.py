@@ -183,14 +183,14 @@ def main(args):
 
         names = ["wiki_metadata","csv_metadata","wiki_mapping_id","csv_mapping_id","csv2wiki","wiki2csv"]
         for name in names:
-            with open(f'./Dataset/Arun/{name}.pickle','wb') as f:
+            with open(f'./Dataset/Stanford_big/{name}.pickle','wb') as f:
                 pickle.dump(eval(name), f, pickle.HIGHEST_PROTOCOL)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("--df_path", type = str, default = "./Dataset/Arun/test.csv", help = "the path of csv2keywords")
+    parser.add_argument("--df_path", type = str, default = "./Dataset/Stanford_big/test.csv", help = "the path of csv2keywords")
 
     args = parser.parse_args()
 

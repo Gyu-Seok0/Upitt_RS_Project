@@ -117,7 +117,7 @@ def main(args):
     kw_model = KeyBERT(model=model1)
 
     # threshold to avg_score
-    avg_score_th = 0.25
+    avg_score_th = 0.4
 
     # word cleaning
     ps = PorterStemmer()

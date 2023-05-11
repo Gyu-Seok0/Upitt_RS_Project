@@ -13,6 +13,10 @@ import gc
 from keybert import KeyBERT
 from tqdm import tqdm
 
+def get_sim_scores(csv_keyword, wiki_keywords, model):
+    return util.pytorch_cos_sim(model.encode(csv_keyword), model.encode(wiki_keywords)).item()
+
+
 def get_avg_scores(csv_keyword, wiki_keywords, model):
     get_gpu()
     with torch.no_grad():
@@ -24,7 +28,7 @@ def get_avg_scores(csv_keyword, wiki_keywords, model):
 
 def get_keywords(sample,kw_model):
 
-    keywords = kw_model.extract_keywords(sample, stop_words = 'english', use_maxsum = True, top_n = 15)
+    keywords = kw_model.extract_keywords(sample, stop_words = 'english', use_maxsum = True, nr_candidate = 10, top_n = 2)
 
     return [k[0] for k in keywords]
 
@@ -121,7 +125,7 @@ def main(args):
     for csv in tqdm(ck_df.itertuples()):
         
         # cleaning
-        clean_keyword = cleaning(csv.keywords, ps, lm)
+        clean_keyword = csv.keywords # cleaning(csv.keywords, ps, lm)
         
         # save metadata for csv 
         csv_file_name = csv.csv_file
@@ -132,7 +136,7 @@ def main(args):
         for csv_keyword in clean_keyword:
 
             # wiki based on searching for csv_keyword
-            wiki_list = wiki.search(csv_keyword)
+            wiki_list = wiki.search(csv_keyword, results=5)
 
             for wiki_candidate in wiki_list:
 
@@ -156,11 +160,11 @@ def main(args):
                     wiki_keywords = wiki_metadata[wiki_title]["keywords"]
 
                 # get_avg scores
-                if not(len(wiki_keywords) == 0):
+                if not(len(wiki_keywords) == 0) and (csv_keyword, tuple(wiki_keywords)) in keyword_pairs:
                     try:
                         avg_score = keyword_pairs[(csv_keyword, tuple(wiki_keywords))]
                     except:
-                        avg_score = get_avg_scores(csv_keyword, wiki_keywords, sentence_model)
+                        avg_score = get_sim_scores(csv_keyword, wiki_keywords, sentence_model)
                         keyword_pairs[(csv_keyword, tuple(wiki_keywords))] = avg_score
 
                     # save
@@ -183,7 +187,7 @@ def main(args):
 
         names = ["wiki_metadata","csv_metadata","wiki_mapping_id","csv_mapping_id","csv2wiki","wiki2csv"]
         for name in names:
-            with open(f'./Dataset/Stanford_big/{name}.pickle','wb') as f:
+            with open(f'{args.out_path}/{name}.pickle','wb') as f:
                 pickle.dump(eval(name), f, pickle.HIGHEST_PROTOCOL)
 
 
@@ -191,7 +195,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     parser.add_argument("--df_path", type = str, default = "./Dataset/Stanford_big/test.csv", help = "the path of csv2keywords")
-
+    parser.add_argument("--out_path", type=str, default="./Dataset/Stanford_big/", help="output folder for pickle files")
     args = parser.parse_args()
 
     print(args)

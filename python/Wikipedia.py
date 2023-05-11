@@ -136,7 +136,7 @@ def main(args):
         for csv_keyword in clean_keyword:
 
             # wiki based on searching for csv_keyword
-            wiki_list = wiki.search(csv_keyword, results=5)
+            wiki_list = wiki.search(csv_keyword)
 
             for wiki_candidate in wiki_list:
 
@@ -160,7 +160,7 @@ def main(args):
                     wiki_keywords = wiki_metadata[wiki_title]["keywords"]
 
                 # get_avg scores
-                if not(len(wiki_keywords) == 0) and (csv_keyword, tuple(wiki_keywords)) in keyword_pairs:
+                if not(len(wiki_keywords) == 0):
                     try:
                         avg_score = keyword_pairs[(csv_keyword, tuple(wiki_keywords))]
                     except:

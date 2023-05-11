@@ -177,7 +177,7 @@ def main(args):
                     try:
                         avg_score = keyword_pairs[(csv_keyword, tuple(wiki_keywords))]
                     except:
-                        avg_score = get_sim_scores(csv_keyword, wiki_keywords, model1)
+                        avg_score = get_avg_scores(csv_keyword, wiki_keywords, model1)
                         keyword_pairs[(csv_keyword, tuple(wiki_keywords))] = avg_score
 
                     # save
@@ -191,10 +191,10 @@ def main(args):
                         create_connection(wiki2csv, wiki_id, csv_id)
                         create_connection(csv2wiki, csv_id, wiki_id)
 
-                    # save wiki_metadata
-                    save_wiki_metadata(wiki_metadata, wiki_title, wiki_keywords, wiki_url)
+                        # save wiki_metadata
+                        save_wiki_metadata(wiki_metadata, wiki_title, wiki_keywords, wiki_url)
 
-                    print(f"[Connect] csv_keyword = {csv_keyword}, wiki_title = {wiki_title}, avg_score = {avg_score}")
+                        print(f"[Connect] csv_keyword = {csv_keyword}, wiki_title = {wiki_title}, avg_score = {avg_score}")
 
         # save the all files as pickle
 

@@ -28,7 +28,7 @@ def get_avg_scores(csv_keyword, wiki_keywords, model):
 
 def get_keywords(sample,kw_model):
 
-    keywords = kw_model.extract_keywords(sample, stop_words = 'english', use_maxsum = True, nr_candidate = 10, top_n = 2)
+    keywords = kw_model.extract_keywords(sample, stop_words = 'english', use_maxsum = True, nr_candidates = 10, top_n = 2)
 
     return [k[0] for k in keywords]
 

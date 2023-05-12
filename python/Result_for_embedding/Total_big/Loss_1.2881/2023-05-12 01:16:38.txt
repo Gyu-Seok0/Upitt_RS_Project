@@ -1,0 +1,4 @@
+Namespace(batch_size=128, data_path='./Dataset/Total_big', epochs=1000, lr=0.02, num_negative=3, result_path='./Result_for_embedding/Total_big/', rwl=40, scheduler=1, window_size=5)
+ num_csv = 143
+ num_wiki = 991
+ min_loss = 1.2881

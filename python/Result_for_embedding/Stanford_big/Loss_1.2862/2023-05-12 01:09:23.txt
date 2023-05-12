@@ -1,0 +1,4 @@
+Namespace(batch_size=128, data_path='./Dataset/Stanford_big', epochs=1000, lr=0.02, num_negative=3, result_path='./Result_for_embedding/Stanford_big/', rwl=40, scheduler=1, window_size=5)
+ num_csv = 154
+ num_wiki = 1012
+ min_loss = 1.2862

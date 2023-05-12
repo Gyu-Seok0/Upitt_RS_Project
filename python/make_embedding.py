@@ -108,6 +108,7 @@ def main(args):
 
     # device
     device = "cuda" if torch.cuda.is_available() else "cpu"
+    device = 'cpu'
     print(f"[Device] {device}")
 
     # load dataset
